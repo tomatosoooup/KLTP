@@ -1,0 +1,47 @@
+{
+  "Navbar": {
+    "main": "Main",
+    "contacts": "Contacts",
+    "about": "About us",
+    "services": "Services"
+  },
+  "Main": {
+    "p1": "Secured partner in finance and cryptocurrency world.",
+    "p2": "Our mission - is to create every operation fast, simple and secured. So that you can focus on your business, instead of worrying about financial aspects.",
+    "button": "MAKE A DEAL"
+  },
+  "Form": {
+    "give": "You Give",
+    "get": "You Receive",
+    "sum": "Amount",
+    "town": "TOWN",
+    "reciever": "Name of Receiver",
+    "button": "Place order"
+  },
+  "About": {
+    "h1": "ABOUT US",
+    "p": "We provide a wide range of financial services.",
+    "l1": "Our company constantly monitors market trends in order to implement the most advanced and secure solutions in the field of finance.",
+    "l2-": "Safety",
+    "l2": " - is not just a word, but out basic principle of work.",
+    "l3": "We combine the best traditions of banking services with innovative solutions in the field of finance and cryptocurrencies.",
+    "l4": "We provide services for buying/selling cryptocurrency for cash in more than 52 countries around the world. ",
+    "l5": "- is a certified cryptocurrency exchange service with a European license."
+  },
+  "Services": {
+    "h1": "SERVICES",
+    "l1": "Cash exchange",
+    "l1-": " (buy/sell)",
+    "l2": "Cash transfers between cities and countries",
+    "l3": "Bank transfers using next payment systems: SEPA, SWIFT, PROSTIR",
+    "l3-": " (Polski Standart Platnosci)",
+    "l4": "Fintech banks top up",
+    "l4-": " ( Revolut, Wise, Zen, etc. )",
+    "l5": "Wide range of companies for specialized customer service throughout many areas",
+    "l6": "Reception/issuance of invoices and contracts.",
+    "l7": "Replenishment of individuals ",
+    "l7-": "(payments for apartments, training, transfers to family)",
+    "l8": "Payment for goods and car auctions around the world."
+  },
+  "Footer": {}
+}

@@ -1,0 +1,47 @@
+{
+  "Navbar": {
+    "main": "Główna",
+    "contacts": "Kontakty",
+    "about": "O nas",
+    "services": "Usługi"
+  },
+  "Main": {
+    "p1": "Bezpieczny i wiarygodny partner w świecie finansów i kryptowalut.",
+    "p2": "Nasza misja  polega na tym, aby każda operacja była szybka, prosta i zabezpieczona. Dzięki temu możesz skupić się na swoim biznesie, zamiast martwić się o aspekty finansowe.",
+    "button": "Wymień Teraz"
+  },
+  "Form": {
+    "give": "Dajesz",
+    "get": "Otrzymujesz",
+    "sum": "Kwota",
+    "town": "MIASTO",
+    "reciever": "Nazwa odbiorcy",
+    "button": "Zostawić zlecenie"
+  },
+  "About": {
+    "h1": "O nas",
+    "p": "Oferujemy szeroki zakres usług finansowych.",
+    "l1": "Nasza firma nieustannie monitoruje trendy na rynku, aby wdrażać najbardziej zaawansowane i bezpieczne rozwiązania w dziedzinie finansów.",
+    "l2-": "Bezpieczeństwo",
+    "l2": "- to nie tylko słowo, ale podstawowa zasada naszej pracy.",
+    "l3": "Łączymy najlepsze tradycje usług bankowych z innowacyjnymi rozwiązaniami w branży  finansów i kryptowalut.",
+    "l4": "Oferujemy usługi zakupu/sprzedaży kryptowalut za gotówkę w ponad 52 krajach na całym świecie.",
+    "l5": "- to certyfikowany kantor wymiany kryptowalut z europejską licencją."
+  },
+  "Services": {
+    "h1": "USŁUGI",
+    "l1": "Wymiana gotówkowa kryptowalut ",
+    "l1-": " (kupno/sprzedaż)",
+    "l2": "Transfery gotówkowe między miastami i krajami",
+    "l3": "Przelewy bankowe przy użyciu następujących systemów płatniczych: SEPA, SWIFT, PROSTIR",
+    "l3-": " (Polski Standart Płatności)",
+    "l4": "Doładowania fintechów",
+    "l4-": " ( Revolut, Wise, Zen itd. )",
+    "l5": "Szeroka gama firm zajmujących się wyspecjalizowaną obsługą klienta w wielu obszarach",
+    "l6": "Przyjmowanie/wystawianie faktur i umów.",
+    "l7": "Uzupełnienie osób fizycznych ",
+    "l7-": "(opłaty za mieszkania, szkolenia, transfery do rodziny)",
+    "l8": "Płatność za aukcje towarów i samochodów na całym świecie."
+  },
+  "Footer": {}
+}

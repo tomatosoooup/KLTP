@@ -1,0 +1,34 @@
+<svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="8" height="6" fill="#1E1E1E"/>
+<g id="Desktop" clip-path="url(#clip0_0_1)">
+<rect width="1600" height="4737" transform="translate(-498 -1093)" fill="#121212"/>
+<rect id="Rectangle" x="-246" y="-156" width="1150" height="618" rx="20" fill="#171717"/>
+<g id="1010101010101 1" filter="url(#filter0_f_0_1)">
+<rect x="-556" y="-1215" width="1198" height="4096" fill="url(#pattern0)" fill-opacity="0.36"/>
+</g>
+<rect id="Rectangle_2" x="-190.5" y="-20.5" width="215" height="44" rx="6.5" fill="url(#paint0_linear_0_1)" stroke="url(#paint1_linear_0_1)"/>
+<path id="Polygon 2" d="M4 6L0.535898 0.75L7.4641 0.75L4 6Z" fill="#D9D9D9"/>
+</g>
+<defs>
+<filter id="filter0_f_0_1" x="-569" y="-1228" width="1224" height="4122" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="6.5" result="effect1_foregroundBlur_0_1"/>
+</filter>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_0_1" transform="scale(0.000834725 0.000244141)"/>
+</pattern>
+<linearGradient id="paint0_linear_0_1" x1="-83" y1="-21" x2="-83" y2="42.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#282828"/>
+<stop offset="0.84034" stop-color="#171717"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_1" x1="-83" y1="-21" x2="-83" y2="24" gradientUnits="userSpaceOnUse">
+<stop stop-color="#828282"/>
+<stop offset="0.723958" stop-color="#828282" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_0_1">
+<rect width="1600" height="4737" fill="white" transform="translate(-498 -1093)"/>
+</clipPath>
+
+</defs>
+</svg>

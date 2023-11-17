@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Integral CF";
+  src: url("IntegralCF-Bold.eot");
+  src: local("Integral CF Bold"), local("IntegralCF-Bold"),
+    url("IntegralCF-Bold.eot?#iefix") format("embedded-opentype"),
+    url("IntegralCF-Bold.woff2") format("woff2"),
+    url("IntegralCF-Bold.woff") format("woff"),
+    url("IntegralCF-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Integral CF";
+  src: url("IntegralCF-Regular.eot");
+  src: local("Integral CF"), local("IntegralCF-Regular"),
+    url("IntegralCF-Regular.eot?#iefix") format("embedded-opentype"),
+    url("IntegralCF-Regular.woff2") format("woff2"),
+    url("IntegralCF-Regular.woff") format("woff"),
+    url("IntegralCF-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Integral CF";
+  src: url("IntegralCF-Medium.eot");
+  src: local("Integral CF Medium"), local("IntegralCF-Medium"),
+    url("IntegralCF-Medium.eot?#iefix") format("embedded-opentype"),
+    url("IntegralCF-Medium.woff2") format("woff2"),
+    url("IntegralCF-Medium.woff") format("woff"),
+    url("IntegralCF-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Integral CF";
+  src: url("IntegralCF-Heavy.eot");
+  src: local("Integral CF Heavy"), local("IntegralCF-Heavy"),
+    url("IntegralCF-Heavy.eot?#iefix") format("embedded-opentype"),
+    url("IntegralCF-Heavy.woff2") format("woff2"),
+    url("IntegralCF-Heavy.woff") format("woff"),
+    url("IntegralCF-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}

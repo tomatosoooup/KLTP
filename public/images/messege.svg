@@ -1,0 +1,21 @@
+<svg width="134" height="129" viewBox="0 0 134 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_df_200_43)">
+<path d="M19 64.5C19 39.371 39.371 19 64.5 19H69.5C94.629 19 115 39.371 115 64.5C115 89.629 94.629 110 69.5 110H64.5C39.371 110 19 89.629 19 64.5Z" fill="#2B2B2B"/>
+</g>
+<path d="M24 64.5C24 42.1325 42.1325 24 64.5 24H69.5C91.8675 24 110 42.1325 110 64.5C110 86.8675 91.8675 105 69.5 105H64.5C42.1325 105 24 86.8675 24 64.5Z" fill="#1E1E1E"/>
+<path d="M88.1378 45.5499C87.3878 44.9139 86.2098 44.8229 84.9918 45.3119H84.9898C83.7088 45.8259 48.7288 60.8299 47.3048 61.4429C47.0458 61.5329 44.7838 62.3769 45.0168 64.2569C45.2248 65.9519 47.0428 66.6539 47.2648 66.7349L56.1578 69.7799C56.7478 71.7439 58.9228 78.9899 59.4038 80.5379C59.7038 81.5029 60.1928 82.7709 61.0498 83.0319C61.8018 83.3219 62.5498 83.0569 63.0338 82.6769L68.4708 77.6339L77.2478 84.4789L77.4568 84.6039C78.0528 84.8679 78.6238 84.9999 79.1688 84.9999C79.5898 84.9999 79.9938 84.9209 80.3798 84.7629C81.6948 84.2229 82.2208 82.9699 82.2758 82.8279L88.8318 48.7509C89.2318 46.9309 88.6758 46.0049 88.1378 45.5499ZM64.0008 70.9979L61.0008 78.9979L58.0008 68.9979L81.0008 51.9979L64.0008 70.9979Z" fill="#828282"/>
+<defs>
+<filter id="filter0_df_200_43" x="0" y="0" width="134" height="129" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect1_dropShadow_200_43"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="8"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.227451 0 0 0 0 0.227451 0 0 0 0 0.231373 0 0 0 0.3 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_200_43"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_200_43" result="shape"/>
+<feGaussianBlur stdDeviation="9.5" result="effect2_foregroundBlur_200_43"/>
+</filter>
+</defs>
+</svg>
