@@ -35,7 +35,7 @@ const imagesMobile = [
     src: "./images/BTC-left.svg",
     width: 225,
     height: 225,
-    class: `absolute z-10 top-0 -left-8 pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
+    class: `absolute z-10 top-1 -left-6 pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
   },
   //
   {
@@ -84,7 +84,7 @@ const About = ({ text }: { text: string[] }) => {
           nums={[0, 0, 1, 0]}
         />
         <section
-          className="relative max-w-[1150px] 2xl:max-w-screen-2xl mx-auto"
+          className="relative max-w-[1200px] 2xl:max-w-screen-2xl mx-auto"
           id="about"
         >
           <h2 className="text-center text-white text-4xl mt-12 lg:mt-24 font-bold uppercase font-tt">

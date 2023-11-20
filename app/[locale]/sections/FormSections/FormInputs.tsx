@@ -94,7 +94,7 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
   return (
     <>
       <div className="flex flex-col justify-center mt-5 lg:mt-10 order-1 lg:order-none font-tt">
-        <div className="flex px-5 lg:px-16 w-full text-white items-center gap-x-5 justify-between font-medium">
+        <div className="flex px-5 lg:px-10 w-full text-white items-center gap-x-5 justify-between font-medium">
           <div className="w-1/2">
             <Reveal options={{ x: -100 }} width="100%">
               <>
@@ -123,7 +123,7 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
             </Reveal>
           </div>
         </div>
-        <div className="flex px-5 lg:px-16 w-full text-white items-end justify-between gap-x-14 mt-6 font-medium">
+        <div className="flex px-5 lg:px-10 w-full text-white items-end justify-between gap-x-14 mt-6 font-medium">
           <div className="w-full lg:w-1/2 relative">
             <Reveal options={{ x: -100 }} width="100%">
               <>
@@ -157,7 +157,7 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
         <Reveal options={{ x: 100 }} width="100%">
           <>
             <div className="font-medium mb-1 lg:mb-0">
-              {type === "Cash" ? `${text[4]}` : "Iban"}
+              {type === "Cash" ? `${text[4]}` : "IBAN"}
             </div>
             <Input id="input-3" onChange={(e) => setIbanTown(e.target.value)} />
           </>
