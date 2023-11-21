@@ -2,8 +2,9 @@ import Image from "next/image";
 import classes from "app/animations/Image.module.css";
 import Numbers from "../../components/Numbers";
 import { Reveal } from "../../components/Reveal";
-import React from "react";
-import Ticker from "../../components/Ticker";
+import React, { lazy } from "react";
+
+const LazyTicker = lazy(() => import("../../components/Ticker"));
 
 const images = [
   {
@@ -187,7 +188,7 @@ const Services = ({ text }: { text: string[] }) => {
           quality={60}
         />
       </div>
-      <Ticker />
+      <LazyTicker />
     </>
   );
 };

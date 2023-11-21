@@ -1,10 +1,13 @@
 "use client";
-import About from "./sections/About";
-import Form from "./sections/Form";
-import Main from "./sections/Main";
-import Services from "./sections/Services";
-import Footer from "./sections/Footer";
+
 import { useTranslations } from "next-intl";
+import { lazy } from "react";
+
+const LazyMain = lazy(() => import("./sections/Main"));
+const LazyAbout = lazy(() => import("./sections/About"));
+const LazyForm = lazy(() => import("./sections/Form"));
+const LazyServices = lazy(() => import("./sections/Services"));
+const LazyFooter = lazy(() => import("./sections/Footer"));
 
 export default function Home() {
   const main = useTranslations("Main");
@@ -51,11 +54,11 @@ export default function Home() {
 
   return (
     <>
-      <Main text={mainText} />
-      <Form text={formText} />
-      <About text={aboutText} />
-      <Services text={servicesText} />
-      <Footer />
+      <LazyMain text={mainText} />
+      <LazyForm text={formText} />
+      <LazyAbout text={aboutText} />
+      <LazyServices text={servicesText} />
+      <LazyFooter />
     </>
   );
 }

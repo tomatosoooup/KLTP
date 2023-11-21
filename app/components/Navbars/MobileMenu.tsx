@@ -76,17 +76,37 @@ const MobileMenu = ({ isVisible, onClick }) => {
         <div className="absolute h-[1px] left-0 -bottom-4 w-full bg-white/10"></div>
       </ul>
 
-      <div className="flex flex-col px-5 mt-8 text-[#D9D9D9] font-bold z-20 font-ct">
-        <span>Wrocław</span>
-        <span className="font-normal">Ofiar Oswiecimskich 17</span>
-        <span className="text-right my-6 font-semibold">10:00-20:00</span>
-        <span>Poznań</span>
-        <span className="font-normal">Poznańska 1/36 60-848</span>
-        <Link href={"/"} className="my-4 font-normal">
+      <div className="flex flex-col px-5 mt-8 text-[#D9D9D9] font-bold z-20 font-ct gap-y-6">
+        <div className="flex flex-col">
+          <span>Wrocław</span>
+          <span className="font-normal">Ofiar Oswiecimskich 17</span>
+        </div>
+
+        <div className="flex flex-col">
+          <span>Poznań</span>
+          <span className="font-normal">Poznańska 1/36 60-848</span>
+        </div>
+
+        <div className="flex flex-col">
+          <span>Warszawa</span>
+          <span className="font-normal">Żurawia 6/12, офис 418</span>
+        </div>
+
+        <div className="flex flex-col">
+          <div className="flex gap-4">
+            <span className="font-bold">Пн-Пт</span>
+            <span className="font-bold">10:00-20:00</span>
+          </div>
+          <div className="flex gap-4">
+            <span className="font-bold">Сб-Вс</span>
+            <span className="font-bold">По запросу</span>
+          </div>
+        </div>
+        <Link href={"/"} className="font-normal">
           kltp.finance@gmail.com
         </Link>
 
-        <div className="flex gap-5 mt-4 font-ct">
+        <div className="flex gap-5 font-ct">
           <Link href={"/"}>
             <Image
               alt="telegram"

@@ -2,8 +2,8 @@ import Image from "next/image";
 import classes from "app/animations/Image.module.css";
 
 import Numbers from "../../components/Numbers";
-import Ticker from "../../components/Ticker";
 import { Reveal } from "../../components/Reveal";
+import { lazy } from "react";
 
 const images = [
   {
@@ -53,6 +53,8 @@ const imagesMobile = [
     class: `absolute z-10 top-0 left-44 pointer-events-none filter ${classes.imgRight} ${classes.img}`,
   },
 ];
+
+const LazyTicker = lazy(() => import("../../components/Ticker"));
 
 const About = ({ text }: { text: string[] }) => {
   const liList = [
@@ -152,7 +154,7 @@ const About = ({ text }: { text: string[] }) => {
           loading="lazy"
         />
       </div>
-      <Ticker />
+      <LazyTicker />
     </>
   );
 };

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsCheck2 } from "react-icons/bs";
 
-import { useState } from "react";
+import { lazy, useState } from "react";
 
 import Numbers from "../../components/Numbers";
 import FormInputs from "./FormSections/FormInputs";
@@ -10,7 +10,8 @@ import FormLogo from "./FormSections/FormLogo";
 
 import { Reveal } from "../../components/Reveal";
 import Button from "../../components/buttons/Button";
-import Ticker from "../../components/Ticker";
+
+const LazyTicker = lazy(() => import("../../components/Ticker"));
 
 const Form = ({ text }: { text: string[] }) => {
   const [isClicked, setIsClicked] = useState(false);
@@ -113,7 +114,7 @@ const Form = ({ text }: { text: string[] }) => {
           />
         </Link>
       </div>
-      <Ticker />
+      <LazyTicker />
     </>
   );
 };

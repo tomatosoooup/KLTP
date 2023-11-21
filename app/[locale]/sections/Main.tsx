@@ -4,8 +4,10 @@ import Button from "../../components/buttons/Button";
 import { Reveal } from "../../components/Reveal";
 import { Link as ScrollLink } from "react-scroll";
 
-import Ticker from "../../components/Ticker";
 import Numbers from "../../components/Numbers";
+import { lazy } from "react";
+
+const LazyTicker = lazy(() => import("../../components/Ticker"));
 
 const Main = ({ text }: { text: string[] }) => {
   return (
@@ -61,7 +63,13 @@ const Main = ({ text }: { text: string[] }) => {
             </div>
             <div className="my-auto lg:ml-24">
               <Reveal options={{ x: 100 }} width="100%">
-                <video width="640" height="360" autoPlay muted>
+                <video
+                  width="640"
+                  height="360"
+                  autoPlay
+                  muted
+                  className="mx-auto"
+                >
                   <source src="/images/Bank.webm" type="video/webm" />
                   Ваш браузер не поддерживает воспроизведение видео в формате
                   WEBM.
@@ -80,7 +88,7 @@ const Main = ({ text }: { text: string[] }) => {
           />
         </section>
       </div>
-      <Ticker />
+      <LazyTicker />
     </>
   );
 };

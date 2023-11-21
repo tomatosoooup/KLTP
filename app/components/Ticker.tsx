@@ -30,8 +30,8 @@ const Ticker = () => {
         </div>
       </div>
       {/* End of first marquee */}
-      <div className="items-wrap font-cf">
-        <div className="items marquee text-5xl lg:text-6xl leading-none dots xl:mb-4 font-bold">
+      <div className="items-wrap font-cf h-16">
+        <div className="items marquee text-5xl lg:text-6xl leading-none dots font-bold">
           <span>KNOW ME</span>
           <p></p>
           <span>LiKE ME</span>
@@ -49,7 +49,7 @@ const Ticker = () => {
           <span>PAY ME</span>
           <p></p>
         </div>
-        <div className="items marquee text-5xl lg:text-6xl leading-none dots xl:mb-4 font-bold">
+        <div className="items marquee text-5xl lg:text-6xl leading-none dots font-bold">
           <span>KNOW ME</span>
           <p></p>
           <span>LiKE ME</span>
