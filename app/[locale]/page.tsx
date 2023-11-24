@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { lazy } from "react";
-import Main from "./sections/Main";
 import Ticker from "app/components/Ticker";
 
 const LazyMain = lazy(() => import("./sections/Main"));
