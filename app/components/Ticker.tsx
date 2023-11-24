@@ -1,5 +1,3 @@
-import "./Ticker.css";
-
 const Ticker = () => {
   return (
     <>
@@ -30,7 +28,7 @@ const Ticker = () => {
         </div>
       </div>
       {/* End of first marquee */}
-      <div className="items-wrap font-cf h-16">
+      <div className="items-wrap font-cf h-14">
         <div className="items marquee text-5xl lg:text-6xl leading-none dots font-bold">
           <span>KNOW ME</span>
           <p></p>

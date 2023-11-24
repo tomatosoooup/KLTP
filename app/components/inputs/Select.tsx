@@ -1,5 +1,4 @@
 import Option from "./Option";
-import classes from "../buttons/Button.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -23,7 +22,7 @@ const Select = ({ options, initialValues, onChoose }) => {
   return (
     <div className="relative text-white font-bold ">
       <div
-        className={`rounded-lg p-2 flex justify-between pl-3 lg:pl-5 pr-6 lg:pr-8 cursor-pointer ${classes.btn}`}
+        className={`rounded-lg p-2 flex justify-between pl-3 lg:pl-5 pr-6 lg:pr-8 cursor-pointer btn`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="pt-1">{values ? values.type : initialValues[0]}</span>

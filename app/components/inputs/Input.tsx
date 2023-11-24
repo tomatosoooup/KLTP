@@ -9,6 +9,7 @@ interface InputProps {
   value?: string;
   onChange?: (str: any) => void;
   placeholder?: string;
+  max_length?: number;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -18,6 +19,8 @@ const Input: React.FC<InputProps> = ({
   value,
   onChange,
   placeholder,
+  max_length,
+  required,
 }) => {
   return (
     <>
@@ -30,6 +33,8 @@ const Input: React.FC<InputProps> = ({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
+          maxLength={max_length}
+          required={required}
           className={clsx(
             `
             w-full

@@ -2,7 +2,6 @@
 
 import clsx from "clsx";
 import { TfiReload } from "react-icons/tfi";
-import classes from "./Button.module.css";
 
 interface ButtonProps {
   type?: "button" | "submit" | "reset" | undefined;
@@ -17,17 +16,19 @@ const Button: React.FC<ButtonProps> = ({
   fullWidth,
   children,
   onClick,
+  disabled,
 }) => {
   return (
     <button
+      disabled={disabled}
       onClick={onClick}
       type={type}
       className={clsx(
         `
-        uppercase text-base leading-6 flex items-center gap-4 rounded-md px-5 py-3 relative justify-center font-tt
-        ${classes.btn}
+        uppercase text-base leading-6 flex items-center gap-4 rounded-md px-5 py-3 relative justify-center font-tt btn 
   `,
-        fullWidth && "w-full"
+        fullWidth && "w-full",
+        disabled && "opacity-50"
       )}
     >
       {children}

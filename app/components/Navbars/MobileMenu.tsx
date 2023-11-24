@@ -107,7 +107,7 @@ const MobileMenu = ({ isVisible, onClick }) => {
         </Link>
 
         <div className="flex gap-5 font-ct">
-          <Link href={"/"}>
+          <Link href={"https://t.me/KLTP_EX"}>
             <Image
               alt="telegram"
               src={"./images/telegram.svg"}
@@ -119,7 +119,9 @@ const MobileMenu = ({ isVisible, onClick }) => {
               }}
             />
           </Link>
-          <Link href={"/"}>
+          <Link
+            href={"https://instagram.com/kltp.exchange?igshid=MzMyNGUyNmU2YQ=="}
+          >
             <Image
               alt="instagram"
               src={"./images/instagram.svg"}

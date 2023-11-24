@@ -2,6 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { lazy } from "react";
+import Main from "./sections/Main";
+import Ticker from "app/components/Ticker";
 
 const LazyMain = lazy(() => import("./sections/Main"));
 const LazyAbout = lazy(() => import("./sections/About"));
@@ -55,9 +57,13 @@ export default function Home() {
   return (
     <>
       <LazyMain text={mainText} />
+      <Ticker />
       <LazyForm text={formText} />
+      <Ticker />
       <LazyAbout text={aboutText} />
+      <Ticker />
       <LazyServices text={servicesText} />
+      <Ticker />
       <LazyFooter />
     </>
   );

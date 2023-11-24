@@ -5,9 +5,6 @@ import { Reveal } from "../../components/Reveal";
 import { Link as ScrollLink } from "react-scroll";
 
 import Numbers from "../../components/Numbers";
-import { lazy } from "react";
-
-const LazyTicker = lazy(() => import("../../components/Ticker"));
 
 const Main = ({ text }: { text: string[] }) => {
   return (
@@ -26,18 +23,18 @@ const Main = ({ text }: { text: string[] }) => {
                 spanClass="blur"
                 nums={[0, 1, 1, 0, 1]}
               />
-              <Reveal options={{ x: -200 }} width="100%">
+              <Reveal options={{ x: -100 }} width="100%">
                 <h1 className="text-3xl md:text-5xl 2xl:text-6xl uppercase mb-0 font-extrabold relative !leading-tight font-ct">
                   Cryptocurrency exchange
                 </h1>
               </Reveal>
-              <Reveal options={{ x: -200 }} width="100%">
+              <Reveal options={{ x: -100 }} width="100%">
                 <div className="flex justify-center lg:justify-start">
                   <div className="my-3 w-72 h-[1px] bg-gradient-to-l from-white to-white/10 lg:hidden"></div>
                   <div className="my-3 w-72 h-[1px] bg-gradient-to-r from-white to-white/10"></div>
                 </div>
               </Reveal>
-              <Reveal options={{ x: -200 }}>
+              <Reveal options={{ x: -100 }}>
                 <p className="text-sm md:text-xl text-[#CECECE] font-light lg:max-w-xl font-tt">
                   <span className="font-bold">{text[0]}</span>
                   <br />
@@ -69,6 +66,7 @@ const Main = ({ text }: { text: string[] }) => {
                   autoPlay
                   muted
                   className="mx-auto"
+                  playsInline
                 >
                   <source src="/images/Bank.webm" type="video/webm" />
                   Ваш браузер не поддерживает воспроизведение видео в формате
@@ -88,7 +86,6 @@ const Main = ({ text }: { text: string[] }) => {
           />
         </section>
       </div>
-      <LazyTicker />
     </>
   );
 };

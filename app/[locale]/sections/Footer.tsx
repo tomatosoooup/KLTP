@@ -3,10 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div
-      className="max-w-[1200px] 2xl:max-w-screen-2xl mx-auto relative z-10 "
-      id="footer"
-    >
+    <div className="max-w-[1200px] 2xl:max-w-screen-2xl mx-auto relative z-10 ">
       <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-between mt-10 lg:mt-2 px-5 xl:px-0">
         <div className="absolute min-w-full bg-white/10 h-[2px] top-36 sm:top-32 left-0 lg:hidden"></div>
         <div className="absolute min-w-full bg-white/10 h-[2px] bottom-44 sm:bottom-48 left-0 lg:hidden"></div>
@@ -61,7 +58,7 @@ const Footer = () => {
               kltp.finance@gmail.com
             </p>
             <div className="flex gap-5">
-              <Link href={"/"}>
+              <Link href={"https://t.me/KLTP_EX"} target="blank">
                 <Image
                   alt="telegram"
                   src={"./images/telegram.svg"}
@@ -69,7 +66,12 @@ const Footer = () => {
                   height={28}
                 />
               </Link>
-              <Link href={"/"}>
+              <Link
+                target="blank"
+                href={
+                  "https://instagram.com/kltp.exchange?igshid=MzMyNGUyNmU2YQ=="
+                }
+              >
                 <Image
                   alt="instagram"
                   src={"./images/instagram.svg"}
@@ -94,7 +96,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-8 lg:mt-12 mb-3 text-white/50 text-sm font-light font-tt">
+      <div
+        className="text-center mt-8 lg:mt-12 mb-3 text-white/50 text-sm font-light font-tt"
+        id="footer"
+      >
         © 2023 KLTP - crypto and financial solutions
       </div>
     </div>

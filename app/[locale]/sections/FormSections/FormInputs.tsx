@@ -31,11 +31,29 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
   const token = "6710200037:AAFmMRbXMTD7epqpg-Uqmi60PtVPwHnfDD0";
   const chat_id = "-4030341613";
 
+  const checkAllow = () => {
+    if (
+      iban_town.length !== 0 &&
+      reciever.length !== 0 &&
+      telegram.length !== 0 &&
+      telegram.startsWith("@")
+    ) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  };
+
+  const [disabled, setIsDisabled] = useState(true);
+
   const onSendMessage = () => {
     if (typeof localStorage !== "undefined") {
       const cur1 = localStorage.getItem("cur1");
       const cur2 = localStorage.getItem("cur2");
-      const text = `Валюта 1 - ${cur1} \n Валюта 2 - ${cur2} \n Пользователь - ${reciever}. \n Iban|Town - ${iban_town}, Telegram - ${telegram} ${amount}`;
+      const text = `Пользователь - ${reciever}.\n\n
+      Валюта 1 - ${cur1} \n Валюта 2 - ${cur2} \n\n  
+      Iban|Town - ${iban_town}. \n\n
+      Telegram - ${telegram} ${amount}`;
 
       const req = axios.post(
         `${telegramUrl}${token}/sendMessage?chat_id=${chat_id}&text=${text}`
@@ -59,6 +77,8 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
       setAvgPrice(null);
       setErrorMessage(true);
     }
+
+    checkAllow();
   };
 
   const handleFromChoose = (cur: string) => {
@@ -68,6 +88,8 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
         localStorage.getItem("cur1") + localStorage.getItem("cur2");
       fetchData(currency);
     }
+
+    checkAllow();
   };
 
   const handleToChoose = (cur: string, type: string) => {
@@ -79,6 +101,8 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
         localStorage.getItem("cur1") + localStorage.getItem("cur2");
       fetchData(currency);
     }
+
+    checkAllow();
   };
 
   const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -86,6 +110,8 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
     if (!isNaN(newAmount)) {
       setAmount(newAmount);
     }
+
+    checkAllow();
   };
 
   const options = getOptions({ option: "first" });
@@ -139,11 +165,11 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
               </>
             </Reveal>
           </div>
-          <div className="w-1/2 relative hidden lg:flex h-[45px] mt-1">
+          <div className="w-full lg:w-1/2 absolute bottom-10 left-0 px-5 lg:px-0 lg:bottom-0 lg:left-0 lg:relative lg:flex h-[45px] mt-1">
             <Reveal options={{ x: -100 }} width="100%">
-              <Button fullWidth type="button">
+              <Button fullWidth type="button" disabled={disabled}>
                 <span
-                  className="text-white pt-1 text-sm font-medium"
+                  className="text-white pt-1 text-xs 2xl:text-sm font-medium"
                   onClick={onSendMessage}
                 >
                   {text[3]}
@@ -159,13 +185,29 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
             <div className="font-medium mb-1 lg:mb-0">
               {type === "Cash" ? `${text[4]}` : "IBAN"}
             </div>
-            <Input id="input-3" onChange={(e) => setIbanTown(e.target.value)} />
+            <Input
+              id="input-3"
+              onChange={(e) => {
+                setIbanTown(e.target.value);
+                checkAllow();
+              }}
+              max_length={20}
+              required
+            />
           </>
         </Reveal>
         <Reveal options={{ x: 100 }} width="100%">
           <>
             <div className="font-medium mb-1 lg:mb-0">{text[5]}</div>
-            <Input id="input-4" onChange={(e) => setReciever(e.target.value)} />
+            <Input
+              id="input-4"
+              onChange={(e) => {
+                setReciever(e.target.value);
+                checkAllow();
+              }}
+              max_length={20}
+              required
+            />
           </>
         </Reveal>
         <Reveal options={{ x: 100 }} width="100%">
@@ -173,8 +215,13 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
             <div className="font-medium mb-1 lg:mb-0">Telegram ID</div>
             <Input
               id="input-5"
-              onChange={(e) => setTelegram(e.target.value)}
+              onChange={(e) => {
+                setTelegram(e.target.value);
+                checkAllow();
+              }}
               placeholder="@username"
+              max_length={20}
+              required
             />
           </>
         </Reveal>

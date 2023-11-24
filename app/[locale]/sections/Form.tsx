@@ -2,16 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsCheck2 } from "react-icons/bs";
 
-import { lazy, useState } from "react";
+import { useState } from "react";
 
 import Numbers from "../../components/Numbers";
 import FormInputs from "./FormSections/FormInputs";
 import FormLogo from "./FormSections/FormLogo";
 
 import { Reveal } from "../../components/Reveal";
-import Button from "../../components/buttons/Button";
-
-const LazyTicker = lazy(() => import("../../components/Ticker"));
 
 const Form = ({ text }: { text: string[] }) => {
   const [isClicked, setIsClicked] = useState(false);
@@ -55,16 +52,12 @@ const Form = ({ text }: { text: string[] }) => {
           <FormInputs text={text} />
 
           <section className="lg:hidden order-4 lg:order-none ">
-            <Reveal options={{ x: 100 }} width="100%">
-              <div className="lg:hidden justify-center h-[50px] mt-10 px-5 ">
-                <Button fullWidth>
-                  <span className="text-white pt-1 font-medium">{text[3]}</span>
-                </Button>
-              </div>
+            <Reveal options={{ x: 10 }} width="100%">
+              <div className="h-[50px] mt-10"></div>
             </Reveal>
           </section>
           <div className="mt-10 px-5 text-[#555] relative text-xs font-semibold auto-cols-[0.5rem] order-3 lg:order-none lg:col-span-2 font-ct">
-            <Reveal options={{ x: 100 }} width="100%">
+            <Reveal options={{ x: 10 }} width="100%">
               <>
                 <div className="flex items-center gap-x-3 lg:ml-[52%]">
                   <div
@@ -103,7 +96,7 @@ const Form = ({ text }: { text: string[] }) => {
           </div>
           <FormLogo />
         </form>
-        <Link href={"/"}>
+        <Link href={"https://t.me/KLTP_EX"}>
           <Image
             alt="telegram"
             src={"./images/messege.svg"}
@@ -114,7 +107,6 @@ const Form = ({ text }: { text: string[] }) => {
           />
         </Link>
       </div>
-      <LazyTicker />
     </>
   );
 };
