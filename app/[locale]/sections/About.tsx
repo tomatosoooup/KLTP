@@ -7,49 +7,48 @@ import { Reveal } from "../../components/Reveal";
 const images = [
   {
     alt: "BTC-small-left",
-    src: "./images/BTC-left.svg",
-    width: 325,
-    height: 325,
-    class: `absolute z-10 top-10 -left-8 pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
+    src: "/images/ETH.png",
+    width: 225,
+    height: 225,
+    class: `absolute z-10 top-32 left-[2rem] pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
   },
   {
     alt: "BTC",
-    src: "./images/BTC.svg",
-    width: 425,
-    height: 425,
-    class: `absolute z-20 left-24 pointer-events-none filter ${classes.imgCenter} ${classes.img}`,
+    src: "/images/BTC.png",
+    width: 300,
+    height: 300,
+    class: `absolute z-20 top-20 left-[10rem] pointer-events-none filter ${classes.imgCenter} ${classes.img}`,
   },
   {
     alt: "BTC-small-right",
-    src: "./images/BTC-right.svg",
-    width: 335,
-    height: 335,
-    class: `absolute z-10 top-10 left-72 pointer-events-none filter ${classes.imgRight} ${classes.img}`,
+    src: "/images/tez.png",
+    width: 235,
+    height: 235,
+    class: `absolute z-10 top-32 left-[24rem] pointer-events-none filter ${classes.imgRight} ${classes.img}`,
   },
 ];
 
 const imagesMobile = [
   {
     alt: "BTC-small-left",
-    src: "./images/BTC-left.svg",
-    width: 225,
-    height: 225,
-    class: `absolute z-10 top-1 -left-6 pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
+    src: "/images/ETH_s.png",
+    width: 150,
+    height: 150,
+    class: `absolute z-10 top-8 left-[2rem] pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
   },
-  //
   {
     alt: "BTC",
-    src: "./images/BTC.svg",
-    width: 275,
-    height: 275,
-    class: `absolute z-20 -top-4 left-14 pointer-events-none filter ${classes.imgCenter} ${classes.img}`,
+    src: "/images/BTC_s.png",
+    width: 175,
+    height: 175,
+    class: `absolute z-20 top-3 left-[7rem] pointer-events-none filter ${classes.imgCenter} ${classes.img}`,
   },
   {
     alt: "BTC-small-right",
-    src: "./images/BTC-right.svg",
-    width: 225,
-    height: 225,
-    class: `absolute z-10 top-0 left-44 pointer-events-none filter ${classes.imgRight} ${classes.img}`,
+    src: "/images/Tez_s.png",
+    width: 150,
+    height: 150,
+    class: `absolute z-10 top-7 left-[14rem] pointer-events-none filter ${classes.imgRight} ${classes.img}`,
   },
 ];
 
@@ -58,7 +57,7 @@ const About = ({ text }: { text: string[] }) => {
     { content: text[2] },
     {
       content: text[4],
-      subcontent: <span className="font-bold">{text[3]}</span>,
+      subcontent: <span className="font-bold ">{text[3]}</span>,
     },
     { content: text[5] },
     { content: text[6] },

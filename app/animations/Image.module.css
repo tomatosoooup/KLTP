@@ -30,7 +30,7 @@
 
 @keyframes moveLeft {
   0% {
-    transform: translate3d(-9px, -8px, 0);
+    transform: translate3d(-9px, 0px, 0);
   }
 
   to {
@@ -52,7 +52,7 @@
 
 @keyframes moveRight {
   0% {
-    transform: translate3d(-9px, 8px, 0);
+    transform: translate3d(9px, 0px, 0);
   }
 
   to {
