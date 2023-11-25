@@ -16,7 +16,7 @@ const Footer = () => {
           </span>
         </div>
         <div className="order-2 lg:order-none relative flex-grow lg:flex-grow-0 lg:ml-3">
-          <h4 className="uppercase text-white text-lg font-black  text-center lg:text-left mt-16 lg:mt-10 font-tt">
+          <h4 className="uppercase text-white text-lg font-black  text-center lg:text-left mt-16 mb-4 lg:mb-0 lg:mt-10 font-tt">
             Локализация
           </h4>
           <div className="flex flex-wrap lg:flex-nowrap gap-6 lg:gap-8 text-[#D9D9D9] text-sm font-bold md:mt-8 ">
