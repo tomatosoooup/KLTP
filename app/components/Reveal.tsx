@@ -19,9 +19,8 @@ export const Reveal = ({
       <motion.div
         initial={{
           opacity: 0,
-
           y: options.bottom || 0,
-          transform: `translate(${options.x})`,
+          transform: `translateX(${options.x})`,
         }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         viewport={{ once: true }}

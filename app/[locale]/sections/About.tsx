@@ -10,7 +10,7 @@ const images = [
     src: "/images/ETH.png",
     width: 225,
     height: 225,
-    class: `absolute z-10 top-32 left-[2rem] pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
+    class: `absolute z-10 top-32 left-[2rem] pointer-events-none filter opacity-80 ${classes.imgLeft} ${classes.img}`,
   },
   {
     alt: "BTC",
@@ -24,7 +24,7 @@ const images = [
     src: "/images/tez.png",
     width: 235,
     height: 235,
-    class: `absolute z-10 top-32 left-[24rem] pointer-events-none filter ${classes.imgRight} ${classes.img}`,
+    class: `absolute z-10 top-32 left-[24rem] pointer-events-none filter opacity-80 ${classes.imgRight} ${classes.img}`,
   },
 ];
 
@@ -34,7 +34,7 @@ const imagesMobile = [
     src: "/images/ETH_s.png",
     width: 150,
     height: 150,
-    class: `absolute z-10 top-8 left-[2rem] pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
+    class: `absolute z-10 top-8 left-[2rem] pointer-events-none filter opacity-60 ${classes.imgLeft} ${classes.img}`,
   },
   {
     alt: "BTC",
@@ -48,7 +48,7 @@ const imagesMobile = [
     src: "/images/Tez_s.png",
     width: 150,
     height: 150,
-    class: `absolute z-10 top-7 left-[14rem] pointer-events-none filter ${classes.imgRight} ${classes.img}`,
+    class: `absolute z-10 top-8 left-[14rem] pointer-events-none filter opacity-60 ${classes.imgRight} ${classes.img}`,
   },
 ];
 
