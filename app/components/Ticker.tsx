@@ -10,7 +10,7 @@ const Ticker = () => {
       </Marquee>
       <Marquee
         autoFill
-        className="text-5xl lg:text-6xl big-marquee font-tt font-black uppercase"
+        className="text-5xl lg:text-6xl big-marquee font-tt font-black uppercase overflow-y-hidden"
       >
         <span>KNOW ME</span>
         <span>LiKE ME</span>
