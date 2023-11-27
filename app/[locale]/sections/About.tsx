@@ -6,49 +6,49 @@ import { Reveal } from "../../components/Reveal";
 
 const images = [
   {
-    alt: "BTC-small-left",
+    alt: "ETH",
     src: "/images/ETH.png",
     width: 225,
     height: 225,
-    class: `absolute z-10 top-32 left-[2rem] pointer-events-none filter opacity-80 ${classes.imgLeft} ${classes.img}`,
+    class: `absolute z-10 top-32 left-[2rem] pointer-events-none filter  ${classes.imgLeft} ${classes.img}`,
   },
   {
-    alt: "BTC",
-    src: "/images/BTC.png",
+    alt: "tez",
+    src: "/images/tez.png",
     width: 300,
     height: 300,
     class: `absolute z-20 top-20 left-[10rem] pointer-events-none filter ${classes.imgCenter} ${classes.img}`,
   },
   {
-    alt: "BTC-small-right",
-    src: "/images/tez.png",
+    alt: "btc",
+    src: "/images/BTC.png",
     width: 225,
     height: 225,
-    class: `absolute z-10 top-32 left-[24rem] pointer-events-none filter opacity-80 ${classes.imgRight} ${classes.img}`,
+    class: `absolute z-10 top-32 left-[24rem] pointer-events-none filter  ${classes.imgRight} ${classes.img}`,
   },
 ];
 
 const imagesMobile = [
   {
-    alt: "BTC-small-left",
-    src: "/images/ETH_s.png",
+    alt: "ETH",
+    src: "/images/ETH.png",
     width: 150,
     height: 150,
-    class: `absolute z-10 top-8 left-[2rem] pointer-events-none filter opacity-60 ${classes.imgLeft} ${classes.img}`,
+    class: `absolute z-10 top-8 left-[2rem] pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
   },
   {
-    alt: "BTC",
-    src: "/images/BTC_s.png",
+    alt: "tez",
+    src: "/images/tez.png",
     width: 175,
     height: 175,
     class: `absolute z-20 top-3 left-[7rem] pointer-events-none filter ${classes.imgCenter} ${classes.img}`,
   },
   {
-    alt: "BTC-small-right",
-    src: "/images/Tez_s.png",
+    alt: "btc",
+    src: "/images/BTC.png",
     width: 150,
     height: 150,
-    class: `absolute z-10 top-8 left-[14rem] pointer-events-none filter opacity-60 ${classes.imgRight} ${classes.img}`,
+    class: `absolute z-10 top-8 left-[14rem] pointer-events-none filter  ${classes.imgRight} ${classes.img}`,
   },
 ];
 
@@ -106,10 +106,6 @@ const About = ({ text }: { text: string[] }) => {
                   className={img.class}
                   key={img.alt}
                   quality={10}
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
                 />
               ))}
             </div>
