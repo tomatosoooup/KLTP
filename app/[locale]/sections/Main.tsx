@@ -60,7 +60,7 @@ const Main = ({ text }: { text: string[] }) => {
             </div>
             <div className="my-auto lg:ml-24">
               <Reveal options={{ x: 100 }} width="100%">
-                <div className="video-mask-container mt-10 lg:mt-0 mx-auto w-full h-full md:w-7/12 md:h-7/12 lg:w-full lg:h-full">
+                <div className="video-mask-container mt-10 lg:mt-0 mx-auto w-10/12 h-10/12 md:w-7/12 md:h-7/12 lg:w-full lg:h-full">
                   <video autoPlay muted playsInline className="masked-video">
                     <source src="mp4/Bank.mp4" type="video/mp4" />
                     Ваш браузер не поддерживает видео.
