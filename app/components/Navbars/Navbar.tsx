@@ -54,7 +54,7 @@ const Navbar = () => {
           >
             <div className="w-16 h-[1px] bg-gradient-to-l from-white to-white/10 absolute -left-28 top-14"></div>
             <span className="text-6xl tracking-[0.5rem] font-cf">KLTP</span>
-            <span className="text-xl tracking-[0.7rem] lowercase font-light font-ct">
+            <span className="text-xl tracking-[0.8rem] lowercase font-light font-ct">
               exchange
             </span>
             <div className="w-16 h-[1px] bg-gradient-to-r from-white to-white/10 absolute -right-28 top-14"></div>
