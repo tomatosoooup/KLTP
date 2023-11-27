@@ -191,7 +191,7 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
                 setIbanTown(e.target.value);
                 checkAllow();
               }}
-              max_length={20}
+              max_length={40}
               required
             />
           </>
@@ -205,7 +205,7 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
                 setReciever(e.target.value);
                 checkAllow();
               }}
-              max_length={20}
+              max_length={40}
               required
             />
           </>
@@ -220,7 +220,7 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
                 checkAllow();
               }}
               placeholder="@username"
-              max_length={20}
+              max_length={40}
               required
             />
           </>

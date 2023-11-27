@@ -19,6 +19,7 @@ const MobileMenu = ({ isVisible, onClick }) => {
         rounded-tr-3xl
         transition-all 
         duration-700
+        overflow-y-auto
     `,
         isVisible && "translate-x-0 flex flex-col transition-all duration-700 "
       )}

@@ -9,7 +9,10 @@ import Numbers from "../../components/Numbers";
 const Main = ({ text }: { text: string[] }) => {
   return (
     <>
-      <div className="max-w-[1200px] 2xl:max-w-screen-2xl mx-auto" id="main">
+      <div
+        className="max-w-[1200px] 2xl:max-w-screen-2xl mx-auto 2xl:px-20"
+        id="main"
+      >
         <Numbers
           containerClass="text-8xl top-0 left-20 main"
           spanClass="blur-xl"
@@ -39,7 +42,7 @@ const Main = ({ text }: { text: string[] }) => {
                   <span className="font-bold">{text[0]}</span>
                   <br />
                   <span className="my-3 block" />
-                  <span className="font-normal">{text[1]}</span>
+                  <span className="font-normal tracking-tight ">{text[1]}</span>
                 </p>
               </Reveal>
               <Reveal options={{ x: -100 }}>

@@ -22,8 +22,8 @@ const images = [
   {
     alt: "BTC-small-right",
     src: "/images/tez.png",
-    width: 235,
-    height: 235,
+    width: 225,
+    height: 225,
     class: `absolute z-10 top-32 left-[24rem] pointer-events-none filter opacity-80 ${classes.imgRight} ${classes.img}`,
   },
 ];
@@ -82,7 +82,7 @@ const About = ({ text }: { text: string[] }) => {
           nums={[0, 0, 1, 0]}
         />
         <section
-          className="relative max-w-[1200px] 2xl:max-w-screen-2xl mx-auto"
+          className="relative max-w-[1200px] 2xl:max-w-screen-2xl mx-auto 2xl:px-20"
           id="about"
         >
           <h2 className="text-center text-white text-4xl mt-12 lg:mt-24 font-bold uppercase font-tt">
@@ -113,7 +113,7 @@ const About = ({ text }: { text: string[] }) => {
                 />
               ))}
             </div>
-            <div className="relative hidden lg:block">
+            <div className="relative hidden lg:block md:scale-75 xl:scale-100">
               {images.map((img) => (
                 <Image
                   alt={img.alt}
@@ -122,11 +122,7 @@ const About = ({ text }: { text: string[] }) => {
                   height={img.height}
                   className={img.class}
                   key={img.alt}
-                  loading="eager"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
+                  loading="lazy"
                 />
               ))}
             </div>

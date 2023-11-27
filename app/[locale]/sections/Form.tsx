@@ -24,7 +24,7 @@ const Form = ({ text }: { text: string[] }) => {
 
   return (
     <>
-      <div className="relative md:mx-20 lg:mx-0">
+      <div className="relative md:mx-20 lg:mx-0 ">
         <form
           id="form"
           className="flex flex-col lg:grid max-w-[1000px] 2xl:max-w-screen-xl mx-auto grid-cols-2 grid-rows-2 bg-[#171717] rounded-2xl mt-10 mb-10 lg:mt-16 lg:mb-16 relative pb-5 z-10"

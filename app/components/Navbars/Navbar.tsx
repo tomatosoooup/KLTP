@@ -6,8 +6,8 @@ const Navbar = () => {
   const t = useTranslations("Navbar");
 
   return (
-    <div className="min-h-fit hidden lg:block">
-      <div className="max-w-[1150px] 2xl:max-w-screen-2xl mx-auto mt-5 px-5 mb-5">
+    <div className="hidden lg:block 2xl:px-20">
+      <div className="max-w-[1150px] 2xl:max-w-screen-2xl mx-auto mt-5 px-5 mb-5 ">
         <ul
           className="flex 
           list-none 
@@ -19,7 +19,8 @@ const Navbar = () => {
           text-white 
           w-full 
           font-light
-          font-tt"
+          font-tt
+          "
         >
           <ScrollLink
             className="mt-7 cursor-pointer mr-auto"
