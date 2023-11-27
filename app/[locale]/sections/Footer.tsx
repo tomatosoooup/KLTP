@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="absolute min-w-full bg-white/10 h-[2px] top-32 left-0 lg:hidden"></div>
         <div className="absolute min-w-full bg-white/10 h-[2px] bottom-44 left-0 lg:hidden"></div>
         <div className="text-center hidden font-medium text-white pt-4 flex-col font-cf xl:flex">
-          <span className="text-5xl 2xl:text-6xl tracking-[0.7rem] font-bold">
+          <span className="text-5xl 2xl:text-6xl tracking-[0.7rem] pr-16 font-bold">
             KLTP
           </span>
-          <span className="text-sm 2xl:text-xl tracking-[0.8rem] lowercase font-light leading-4 font-ct">
+          <span className="text-sm 2xl:text-xl tracking-[0.8rem] pr-16 lowercase font-light leading-4 font-ct">
             exchange
           </span>
         </div>
