@@ -55,7 +55,9 @@ const Footer = () => {
           </h4>
           <div className="flex lg:flex-col gap-20 lg:gap-5 md:mt-8">
             <p className="text-[#D9D9D9] text-base font-light font-ct">
-              kltp.finance@gmail.com
+              <Link href={"mailto:kltp.finance@gmail.com?subject=KLTP order"}>
+                kltp.finance@gmail.com
+              </Link>
             </p>
             <div className="flex gap-5">
               <Link href={"https://t.me/KLTP_EX"} target="blank">
