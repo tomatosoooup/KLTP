@@ -60,18 +60,12 @@ const Main = ({ text }: { text: string[] }) => {
             </div>
             <div className="my-auto lg:ml-24">
               <Reveal options={{ x: 100 }} width="100%">
-                <video
-                  width="640"
-                  height="360"
-                  autoPlay
-                  muted
-                  className="mx-auto"
-                  playsInline
-                >
-                  <source src="/images/Bank.webm" type="video/webm" />
-                  Ваш браузер не поддерживает воспроизведение видео в формате
-                  WEBM.
-                </video>
+                <div className="video-mask-container mt-10 lg:mt-0 mx-auto w-full h-full md:w-7/12 md:h-7/12 lg:w-full lg:h-full">
+                  <video autoPlay loop muted className="masked-video">
+                    <source src="mp4/Comp 1_1.mp4" type="video/mp4" />
+                    Ваш браузер не поддерживает видео.
+                  </video>
+                </div>
               </Reveal>
             </div>
           </div>
