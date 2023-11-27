@@ -27,7 +27,7 @@ const Form = ({ text }: { text: string[] }) => {
       <div className="relative md:mx-20 lg:mx-0 ">
         <form
           id="form"
-          className="flex flex-col lg:grid max-w-[990px] 2xl:max-w-[1100px] mx-auto grid-cols-2 grid-rows-2 bg-[#171717] rounded-2xl mt-10 mb-10 lg:mt-16 lg:mb-16 relative pb-5 z-10"
+          className="flex flex-col lg:grid max-w-[1000px] 2xl:max-w-[1050px] mx-auto grid-cols-2 grid-rows-2 bg-[#171717] rounded-2xl mt-10 mb-10 lg:mt-16 lg:mb-16 relative pb-5 z-10"
         >
           <Numbers
             containerClass="text-3xl bottom-10 left-28"
@@ -102,7 +102,7 @@ const Form = ({ text }: { text: string[] }) => {
             src={"./images/messege.svg"}
             width={150}
             height={150}
-            className="absolute top-64 right-0 2xl:right-20 hidden xl:block z-20"
+            className="absolute top-64 -right-4 2xl:right-20 hidden xl:block z-20"
             loading="lazy"
           />
         </Link>

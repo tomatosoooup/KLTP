@@ -82,7 +82,7 @@ const About = ({ text }: { text: string[] }) => {
           nums={[0, 0, 1, 0]}
         />
         <section
-          className="relative max-w-[1200px] 2xl:max-w-screen-2xl mx-auto 2xl:px-20"
+          className="relative max-w-[1200px] 2xl:max-w-[1400px] mx-auto "
           id="about"
         >
           <h2 className="text-center text-white text-4xl mt-12 lg:mt-24 font-bold uppercase font-tt">

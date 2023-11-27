@@ -9,7 +9,7 @@ import Numbers from "../../components/Numbers";
 const Main = ({ text }: { text: string[] }) => {
   return (
     <>
-      <div className="max-w-[1200px] 2xl:max-w-[1400px] mx-auto" id="main">
+      <div className="max-w-[1200px] 2xl:max-w-[1350px] mx-auto" id="main">
         <Numbers
           containerClass="text-8xl top-0 left-20 main"
           spanClass="blur-xl"

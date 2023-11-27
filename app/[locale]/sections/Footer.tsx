@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="max-w-[1200px] 2xl:max-w-[1400px] mx-auto relative z-10">
+    <div className="max-w-[1200px] 2xl:max-w-[1350px] mx-auto relative z-10">
       <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-between mt-10 lg:mt-2 px-5 xl:px-0">
         <div className="absolute min-w-full bg-white/10 h-[2px] top-32 left-0 lg:hidden"></div>
         <div className="absolute min-w-full bg-white/10 h-[2px] bottom-44 left-0 lg:hidden"></div>
@@ -11,7 +11,7 @@ const Footer = () => {
           <span className="text-5xl 2xl:text-6xl tracking-[0.7rem] font-bold">
             KLTP
           </span>
-          <span className="text-sm 2xl:text-xl  tracking-[0.7rem] lowercase font-light leading-4 font-ct">
+          <span className="text-sm 2xl:text-xl tracking-[0.8rem] lowercase font-light leading-4 font-ct">
             exchange
           </span>
         </div>
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="lg:ml-10 order-3 lg:order-none">
-          <h4 className="uppercase text-white text-lg font-black text-center lg:text-left mt-16 lg:mt-10 font-tt pb-8 md:pb-0">
+          <h4 className="uppercase text-white text-lg font-black text-center lg:text-left mt-16 lg:mt-3 font-tt pb-8 md:pb-0">
             Контакт
           </h4>
           <div className="flex lg:flex-col gap-20 lg:gap-5 md:mt-8">
