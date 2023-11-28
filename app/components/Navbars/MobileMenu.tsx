@@ -1,22 +1,22 @@
 import clsx from "clsx";
 import Image from "next/image";
-import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 
 const MobileMenu = ({ isVisible, onClick }) => {
+  const handleScrollClick = (targetId: string) => {
+    let c = document.getElementById(targetId).getBoundingClientRect();
+    window.scrollTo({
+      behavior: "smooth",
+      top: document.getElementById(targetId).scrollTop + c.top - 175,
+    });
+    console.log("worked");
+  };
+
   return (
     <div
       className={clsx(
         `
-        h-screen
-        w-72
-        md:w-80
-        bg-[#121212]/95
-        fixed 
-        inset-0 
-        -translate-x-full 
-        py-20
-        rounded-tr-3xl
+        h-screen w-72 md:w-80 bg-[#121212]/95 fixed inset-0 -translate-x-full py-20 rounded-tr-3xl
         transition-all 
         duration-700
         overflow-y-auto
@@ -27,53 +27,45 @@ const MobileMenu = ({ isVisible, onClick }) => {
     >
       <div className="z-10 w-full h-screen absolute bg-[#121212]/80 blur-sm inset-0 rounded-tr-3xl"></div>
       <ul className="flex flex-col text-[#ffffff] px-5 gap-10 font-medium text-2xl mt-5 relative uppercase z-20 font-tt">
-        <ScrollLink
-          to="main"
-          spy={true}
-          smooth={true}
-          offset={-150}
-          duration={1500}
-          onClick={onClick}
+        <span
+          onClick={() => {
+            onClick();
+            handleScrollClick("main");
+          }}
           className="ml-5 pt-2"
         >
           Головна
-        </ScrollLink>
+        </span>
         <div className="absolute h-[1px] left-0 top-14 w-full bg-white/10"></div>
-        <ScrollLink
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={-150}
-          duration={1500}
-          onClick={onClick}
+        <span
+          onClick={() => {
+            onClick();
+            handleScrollClick("about");
+          }}
           className="ml-5"
         >
           О нас
-        </ScrollLink>
+        </span>
         <div className="absolute h-[1px] left-0 top-32 w-full bg-white/10"></div>
-        <ScrollLink
-          to="services"
-          spy={true}
-          smooth={true}
-          offset={-150}
-          duration={2500}
-          onClick={onClick}
+        <span
+          onClick={() => {
+            onClick();
+            handleScrollClick("services");
+          }}
           className="ml-5"
         >
           Послуги
-        </ScrollLink>
+        </span>
         <div className="absolute h-[1px] left-0 top-[200px] w-full bg-white/10"></div>
-        <ScrollLink
-          to="footer"
-          spy={true}
-          smooth={true}
-          offset={-150}
-          duration={3500}
-          onClick={onClick}
+        <span
+          onClick={() => {
+            onClick();
+            handleScrollClick("footer");
+          }}
           className="ml-5"
         >
           Контакти
-        </ScrollLink>
+        </span>
         <div className="absolute h-[1px] left-0 -bottom-4 w-full bg-white/10"></div>
       </ul>
 
