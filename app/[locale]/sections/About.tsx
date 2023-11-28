@@ -7,21 +7,21 @@ import { Reveal } from "../../components/Reveal";
 const images = [
   {
     alt: "ETH",
-    src: "/images/ETH01.png",
+    src: "/images/ETH.png",
     width: 225,
     height: 225,
     class: `absolute z-10 top-32 left-[2rem] pointer-events-none filter  ${classes.imgLeft} ${classes.img}`,
   },
   {
     alt: "tez",
-    src: "/images/Tez01.png",
+    src: "/images/Tez.png",
     width: 300,
     height: 300,
     class: `absolute z-20 top-20 left-[10rem] pointer-events-none filter ${classes.imgCenter} ${classes.img}`,
   },
   {
     alt: "btc",
-    src: "/images/BTC01.png",
+    src: "/images/BTC.png",
     width: 225,
     height: 225,
     class: `absolute z-10 top-32 left-[24rem] pointer-events-none filter  ${classes.imgRight} ${classes.img}`,
@@ -31,21 +31,21 @@ const images = [
 const imagesMobile = [
   {
     alt: "ETH",
-    src: "/images/ETH01.png",
+    src: "/images/ETH.png",
     width: 150,
     height: 150,
     class: `absolute z-10 top-8 left-[2rem] pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
   },
   {
     alt: "tez",
-    src: "/images/Tez01.png",
+    src: "/images/Tez.png",
     width: 175,
     height: 175,
     class: `absolute z-20 top-3 left-[7rem] pointer-events-none filter ${classes.imgCenter} ${classes.img}`,
   },
   {
     alt: "btc",
-    src: "/images/BTC01.png",
+    src: "/images/BTC.png",
     width: 150,
     height: 150,
     class: `absolute z-10 top-8 left-[14rem] pointer-events-none filter  ${classes.imgRight} ${classes.img}`,
