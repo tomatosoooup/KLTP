@@ -59,7 +59,7 @@ const Form = ({ text }: { text: string[] }) => {
           <div className="mt-10 px-5 text-[#555] relative text-xs font-semibold auto-cols-[0.5rem] order-3 lg:order-none lg:col-span-2 font-ct">
             <Reveal options={{ x: 10 }} width="100%">
               <>
-                <div className="flex items-center gap-x-3 lg:ml-[52%]">
+                <div className="flex items-center gap-x-2 lg:ml-[52%]">
                   <div
                     className={`w-5 h-5  border-[#828282] border rounded-sm cursor-pointer ${
                       isClicked ? "bg-[#9b9b9b]" : "bg-transparent"
@@ -71,7 +71,7 @@ const Form = ({ text }: { text: string[] }) => {
                   I agree with
                   <Link href={"/"}>Terms and conditions of service</Link>
                 </div>
-                <div className="flex items-center gap-x-3 mt-2 lg:ml-[52%]">
+                <div className="flex items-center gap-x-2 mt-2 lg:ml-[52%]">
                   <div
                     className={`w-5 h-5  border-[#828282] border rounded-sm cursor-pointer ${
                       isClickedTwo ? "bg-[#9b9b9b]" : "bg-transparent"
@@ -85,7 +85,7 @@ const Form = ({ text }: { text: string[] }) => {
                 </div>
                 <Image
                   alt="qr-code"
-                  src={"./images/qr.svg"}
+                  src={"/images/qr.png"}
                   width={100}
                   height={100}
                   className="absolute hidden lg:block right-20 top-0 pointer-events-none"
@@ -102,7 +102,7 @@ const Form = ({ text }: { text: string[] }) => {
             src={"./images/messege.svg"}
             width={150}
             height={150}
-            className="absolute top-64 -right-4 2xl:right-20 hidden xl:block z-20"
+            className="absolute top-64 -right-0 2xl:right-10 hidden xl:block z-20"
             loading="lazy"
           />
         </Link>
