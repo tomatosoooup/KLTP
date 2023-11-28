@@ -19,7 +19,7 @@ const BurgerMenu = () => {
           className={`bg-slate-100 block transition-all duration-700 ease-out 
                      w-8 rounded-sm h-[3px] ${
                        isOpen
-                         ? "rotate-45 translate-y-[8.5px]"
+                         ? "rotate-45 translate-y-[8.5px] opacity-70"
                          : "-translate-y-0.5"
                      }`}
         ></span>
@@ -33,7 +33,7 @@ const BurgerMenu = () => {
           className={`bg-slate-100 block transition-all duration-700 ease-out 
                      w-8 rounded-sm h-[3px] ${
                        isOpen
-                         ? "-rotate-45 -translate-y-[8.5px]"
+                         ? "-rotate-45 -translate-y-[8.5px] opacity-70"
                          : "translate-y-0.5"
                      }`}
         ></span>

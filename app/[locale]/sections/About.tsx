@@ -7,21 +7,21 @@ import { Reveal } from "../../components/Reveal";
 const images = [
   {
     alt: "ETH",
-    src: "/images/ETH01.png",
+    src: "/images/ETH.png",
     width: 225,
     height: 225,
     class: `absolute z-10 top-32 left-[2rem] pointer-events-none filter  ${classes.imgLeft} ${classes.img}`,
   },
   {
     alt: "tez",
-    src: "/images/Tez01.png",
+    src: "/images/Tez.png",
     width: 300,
     height: 300,
     class: `absolute z-20 top-20 left-[10rem] pointer-events-none filter ${classes.imgCenter} ${classes.img}`,
   },
   {
     alt: "btc",
-    src: "/images/BTC01.png",
+    src: "/images/BTC.png",
     width: 225,
     height: 225,
     class: `absolute z-10 top-32 left-[24rem] pointer-events-none filter  ${classes.imgRight} ${classes.img}`,
@@ -31,21 +31,21 @@ const images = [
 const imagesMobile = [
   {
     alt: "ETH",
-    src: "/images/ETH01.png",
+    src: "/images/ETH.png",
     width: 150,
     height: 150,
     class: `absolute z-10 top-8 left-[2rem] pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
   },
   {
     alt: "tez",
-    src: "/images/Tez01.png",
+    src: "/images/Tez.png",
     width: 175,
     height: 175,
     class: `absolute z-20 top-3 left-[7rem] pointer-events-none filter ${classes.imgCenter} ${classes.img}`,
   },
   {
     alt: "btc",
-    src: "/images/BTC01.png",
+    src: "/images/BTC.png",
     width: 150,
     height: 150,
     class: `absolute z-10 top-8 left-[14rem] pointer-events-none filter  ${classes.imgRight} ${classes.img}`,
@@ -82,7 +82,7 @@ const About = ({ text }: { text: string[] }) => {
           nums={[0, 0, 1, 0]}
         />
         <section
-          className="relative max-w-[1200px] 2xl:max-w-[1400px] mx-auto "
+          className="relative max-w-[1200px] 2xl:max-w-[1400px] mx-auto"
           id="about"
         >
           <h2 className="text-center text-white text-4xl mt-12 lg:mt-24 font-bold uppercase font-tt">
@@ -109,7 +109,7 @@ const About = ({ text }: { text: string[] }) => {
                 />
               ))}
             </div>
-            <div className="relative hidden lg:block md:scale-75 xl:scale-100">
+            <div className="relative hidden lg:block md:scale-75 2xl:scale-100">
               {images.map((img) => (
                 <Image
                   alt={img.alt}

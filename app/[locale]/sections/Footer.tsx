@@ -50,7 +50,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="order-3 lg:order-none">
+<<<<<<< HEAD
           <h4 className="uppercase text-white text-lg font-black text-center lg:text-left mt-16 lg:mt-6 font-tt pb-8 md:pb-0">
+=======
+          <h4 className="uppercase text-white text-lg font-black text-center lg:text-left mt-16 lg:mt-3 font-tt pb-8 md:pb-0">
+>>>>>>> 627f4a8e0bb15f0243ebc84d6df765ea3c09760f
             Контакт
           </h4>
           <div className="flex lg:flex-col gap-20 lg:gap-5 md:mt-12">

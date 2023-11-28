@@ -1,49 +1,33 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const t = useTranslations("Navbar");
 
+  const handleScrollClick = (targetId: string) => {
+    let c = document.getElementById(targetId).getBoundingClientRect();
+    window.scrollTo({
+      behavior: "smooth",
+      top: document.getElementById(targetId).scrollTop + c.top - 175,
+    });
+  };
+
   return (
     <div className="hidden lg:block ">
-      <div className="max-w-[1150px] 2xl:max-w-[1350px] mx-auto mt-5 px-5 mb-5 ">
-        <ul
-          className="flex 
-          list-none 
-          items-center 
-          justify-center 
-          h-full 
-          text-[20px] 
-          uppercase 
-          text-white 
-          w-full 
-          font-light
-          font-tt
-          "
-        >
-          <ScrollLink
+      <div className="max-w-[1150px] 2xl:max-w-[1400px] mx-auto mt-5 px-5 mb-5 ">
+        <ul className="flex list-none items-center justify-center h-full text-[20px] uppercase text-white w-full font-light font-tt">
+          <span
             className="mt-7 cursor-pointer mr-auto"
-            activeClass="active"
-            to="main"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
+            onClick={() => handleScrollClick("main")}
           >
             {t("main")}
-          </ScrollLink>
-          <ScrollLink
+          </span>
+          <span
             className="mt-7 cursor-pointer mr-auto"
-            activeClass="active"
-            to="footer"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={3500}
+            onClick={() => handleScrollClick("footer")}
           >
             {t("contacts")}
-          </ScrollLink>
+          </span>
           <div
             className="
           text-center 
@@ -59,28 +43,18 @@ const Navbar = () => {
             </span>
             <div className="w-16 h-[1px] bg-gradient-to-r from-white to-white/10 absolute -right-28 top-14"></div>
           </div>
-          <ScrollLink
+          <span
             className="mt-7 cursor-pointer ml-auto"
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={2000}
+            onClick={() => handleScrollClick("about")}
           >
             {t("about")}
-          </ScrollLink>
-          <ScrollLink
+          </span>
+          <span
             className="mt-7 cursor-pointer ml-auto"
-            activeClass="active"
-            to="services"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={2000}
+            onClick={() => handleScrollClick("services")}
           >
             {t("services")}
-          </ScrollLink>
+          </span>
         </ul>
       </div>
     </div>
