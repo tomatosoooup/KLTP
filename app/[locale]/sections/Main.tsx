@@ -23,18 +23,18 @@ const Main = ({ text }: { text: string[] }) => {
                 spanClass="blur"
                 nums={[0, 1, 1, 0, 1]}
               />
-              <Reveal options={{ x: -100 }} width="100%">
+              <Reveal options={{ x: -200 }} width="100%">
                 <h1 className="text-3xl md:text-5xl 2xl:text-6xl uppercase mb-0 font-extrabold relative !leading-tight font-ct">
                   Cryptocurrency exchange
                 </h1>
               </Reveal>
-              <Reveal options={{ x: -100 }} width="100%">
+              <Reveal options={{ x: -200 }} width="100%">
                 <div className="flex justify-center lg:justify-start">
                   <div className="my-3 w-72 h-[1px] bg-gradient-to-l from-white to-white/10 lg:hidden"></div>
                   <div className="my-3 w-72 h-[1px] bg-gradient-to-r from-white to-white/10"></div>
                 </div>
               </Reveal>
-              <Reveal options={{ x: -100 }}>
+              <Reveal options={{ x: -200 }}>
                 <p className="text-sm md:text-xl text-[#CECECE] font-light lg:max-w-xl font-tt">
                   <span className="font-bold">{text[0]}</span>
                   <br />
@@ -42,7 +42,7 @@ const Main = ({ text }: { text: string[] }) => {
                   <span className="font-normal tracking-tight ">{text[1]}</span>
                 </p>
               </Reveal>
-              <Reveal options={{ x: -100 }}>
+              <Reveal options={{ x: -200 }}>
                 <div className="hidden lg:block mt-6">
                   <ScrollLink
                     to="form"

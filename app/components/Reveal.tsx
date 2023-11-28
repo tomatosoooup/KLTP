@@ -20,7 +20,7 @@ export const Reveal = ({
         initial={{
           opacity: 0,
           y: options.bottom || 0,
-          transform: `translateX(${options.x})`,
+          x: options.x,
         }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         viewport={{ once: true }}
