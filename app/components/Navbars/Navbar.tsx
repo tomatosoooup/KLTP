@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <div className="hidden lg:block ">
-      <div className="max-w-[1150px] 2xl:max-w-[1350px] mx-auto mt-5 px-5 mb-5 ">
+      <div className="max-w-[1150px] 2xl:max-w-[1400px] mx-auto mt-5 px-5 mb-5 ">
         <ul
           className="flex 
           list-none 

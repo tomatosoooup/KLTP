@@ -49,7 +49,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="lg:ml-10 order-3 lg:order-none">
+        <div className="order-3 lg:order-none">
           <h4 className="uppercase text-white text-lg font-black text-center lg:text-left mt-16 lg:mt-3 font-tt pb-8 md:pb-0">
             Контакт
           </h4>

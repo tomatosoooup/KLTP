@@ -82,7 +82,7 @@ const About = ({ text }: { text: string[] }) => {
           nums={[0, 0, 1, 0]}
         />
         <section
-          className="relative max-w-[1200px] 2xl:max-w-[1400px] mx-auto "
+          className="relative max-w-[1200px] 2xl:max-w-[1400px] mx-auto"
           id="about"
         >
           <h2 className="text-center text-white text-4xl mt-12 lg:mt-24 font-bold uppercase font-tt">
@@ -109,7 +109,7 @@ const About = ({ text }: { text: string[] }) => {
                 />
               ))}
             </div>
-            <div className="relative hidden lg:block md:scale-75 xl:scale-100">
+            <div className="relative hidden lg:block md:scale-75 2xl:scale-100">
               {images.map((img) => (
                 <Image
                   alt={img.alt}
