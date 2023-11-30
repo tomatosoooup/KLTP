@@ -169,7 +169,7 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
             <Reveal options={{ x: -100 }} width="100%">
               <Button fullWidth type="button" disabled={disabled}>
                 <span
-                  className="text-white pt-1 text-xs 2xl:text-sm font-medium"
+                  className="text-white pt-1 text-[12px] 2xl:text-sm font-medium"
                   onClick={onSendMessage}
                 >
                   {text[3]}
