@@ -115,7 +115,7 @@ const Services = ({ text }: { text: string[] }) => {
   return (
     <>
       <div className="relative 2xl:px-20">
-        <section className="max-w-[1200px] 2xl:max-w-[1350px] mx-auto relative ">
+        <section className="max-w-[1150px] 2xl:max-w-[1350px] mx-auto relative ">
           <Numbers
             containerClass="text-4xl -top-20 left-6"
             spanClass="blur"

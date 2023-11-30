@@ -103,7 +103,7 @@ const Form = ({ text }: { text: string[] }) => {
               src={"./images/messege.svg"}
               width={140}
               height={140}
-              className="absolute top-64 -right-36 hidden xl:block z-20"
+              className="absolute top-64 -right-[135px] hidden xl:block z-20"
               loading="lazy"
             />
           </Link>
