@@ -50,11 +50,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="order-3 lg:order-none">
-<<<<<<< HEAD
           <h4 className="uppercase text-white text-lg font-black text-center lg:text-left mt-16 lg:mt-6 font-tt pb-8 md:pb-0">
-=======
-          <h4 className="uppercase text-white text-lg font-black text-center lg:text-left mt-16 lg:mt-3 font-tt pb-8 md:pb-0">
->>>>>>> 627f4a8e0bb15f0243ebc84d6df765ea3c09760f
             Контакт
           </h4>
           <div className="flex lg:flex-col gap-20 lg:gap-5 md:mt-12">
@@ -92,7 +88,7 @@ const Footer = () => {
           <h4 className="uppercase text-white text-lg font-black pb-6 md:pb-0 lg:pb-8 lg:mt-4 text-center lg:text-left font-tt">
             Документы
           </h4>
-          <div className="flex lg:flex-col text-white/70 text-sm gap-10 font-light lg:gap-2 font-ct text-center md:text-left md:mt-8">
+          <div className="flex lg:flex-col text-white/70 text-sm gap-10 font-light lg:gap-2 font-ct text-center md:text-left md:mt-6">
             <Link href={"/"} className="w-full">
               AML / CTF terms
             </Link>
