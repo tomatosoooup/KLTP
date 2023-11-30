@@ -148,7 +148,7 @@ const Services = ({ text }: { text: string[] }) => {
                   </AnimatedText>
                 ))}
               </ul>
-              <ul className="flex flex-col max-w-xl gap-6 text-[#EAEAEA] text-lg font-normal mt-5 md:mt-14 md:ml-[22%] relative">
+              <ul className="flex flex-col max-w-xl gap-6 text-[#EAEAEA] text-lg font-normal mt-5 md:mt-14 md:ml-[20%] relative">
                 {liListSecond.map((li) => (
                   <AnimatedText key={li.content}>
                     <li className="relative pl-4">
