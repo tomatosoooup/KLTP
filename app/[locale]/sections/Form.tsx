@@ -68,8 +68,10 @@ const Form = ({ text }: { text: string[] }) => {
                   >
                     {isClicked && <BsCheck2 size={19} color="white" />}
                   </div>
-                  I agree with
-                  <Link href={"/"}>Terms and conditions of service</Link>
+
+                  <Link href={"/"}>
+                    I agree with Terms and conditions of service
+                  </Link>
                 </div>
                 <div className="flex items-center gap-x-2 mt-2 lg:ml-[52%]">
                   <div
@@ -80,14 +82,14 @@ const Form = ({ text }: { text: string[] }) => {
                   >
                     {isClickedTwo && <BsCheck2 size={19} color="white" />}
                   </div>
-                  I agree with
-                  <Link href={"/"}>AML / CTF Terms</Link>
+
+                  <Link href={"/"}>I agree with AML / CTF Terms</Link>
                 </div>
                 <Image
                   alt="qr-code"
                   src={"/images/qr.png"}
-                  width={100}
-                  height={100}
+                  width={95}
+                  height={95}
                   className="absolute hidden lg:block right-20 top-0 pointer-events-none"
                   loading="lazy"
                 />
