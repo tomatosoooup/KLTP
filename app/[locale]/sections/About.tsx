@@ -64,7 +64,9 @@ const About = ({ text }: { text: string[] }) => {
     {
       content: text[7],
       subcontent: (
-        <span className="uppercase font-bold mr-1 font-cf">KLTP EXCHANGE</span>
+        <span className="uppercase font-bold mr-1 font-cf tracking-[0.1rem]">
+          KLTP EXCHANGE
+        </span>
       ),
     },
   ];

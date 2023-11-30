@@ -36,7 +36,7 @@ const Main = ({ text }: { text: string[] }) => {
               </Reveal>
               <Reveal options={{ x: -200 }}>
                 <p className="text-sm md:text-xl text-[#CECECE] font-light lg:max-w-xl font-tt">
-                  <span className="font-bold">{text[0]}</span>
+                  <span className="font-bold tracking-tight">{text[0]}</span>
                   <br />
                   <span className="my-3 block" />
                   <span className="font-normal tracking-tight ">{text[1]}</span>

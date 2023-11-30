@@ -52,12 +52,12 @@ const Form = ({ text }: { text: string[] }) => {
           <FormInputs text={text} />
 
           <section className="lg:hidden order-4 lg:order-none ">
-            <Reveal options={{ x: 10 }} width="100%">
+            <Reveal options={{ x: 100 }} width="100%">
               <div className="h-[50px] mt-10"></div>
             </Reveal>
           </section>
           <div className="mt-10 px-5 text-[#555] relative text-xs font-semibold auto-cols-[0.5rem] order-3 lg:order-none lg:col-span-2 font-ct">
-            <Reveal options={{ x: 10 }} width="100%">
+            <Reveal options={{ x: 100 }} width="100%">
               <>
                 <div className="flex items-center gap-x-2 lg:ml-[52%]">
                   <div
@@ -97,17 +97,17 @@ const Form = ({ text }: { text: string[] }) => {
             </Reveal>
           </div>
           <FormLogo />
+          <Link href={"https://t.me/KLTP_EX"}>
+            <Image
+              alt="telegram"
+              src={"./images/messege.svg"}
+              width={140}
+              height={140}
+              className="absolute top-64 -right-36 hidden xl:block z-20"
+              loading="lazy"
+            />
+          </Link>
         </form>
-        <Link href={"https://t.me/KLTP_EX"}>
-          <Image
-            alt="telegram"
-            src={"./images/messege.svg"}
-            width={150}
-            height={150}
-            className="absolute top-64 -right-0 2xl:right-10 hidden xl:block z-20"
-            loading="lazy"
-          />
-        </Link>
       </div>
     </>
   );

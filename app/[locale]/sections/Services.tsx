@@ -9,7 +9,7 @@ const images = [
     alt: "sepa",
     width: 475,
     height: 475,
-    class: `hidden lg:block absolute right-4 top-20 pointer-events-none filter ${classes.img} ${classes.imgTop}`,
+    class: `hidden lg:block absolute right-4 top-20 pointer-events-none filter md:scale-75 2xl:scale-100 ${classes.img} ${classes.imgTop}`,
     src: "/images/sepa.png",
     quality: 100,
   },
@@ -26,7 +26,7 @@ const images = [
     alt: "swift",
     width: 375,
     height: 375,
-    class: `hidden lg:block absolute -right-16 bottom-32 pointer-events-none filter ${classes.img} ${classes.imgTop}`,
+    class: `hidden lg:block absolute -right-16 bottom-32 pointer-events-none filter md:scale-75 2xl:scale-100 ${classes.img} ${classes.imgTop}`,
     src: "./images/swift.svg",
     quality: 10,
   },
@@ -115,7 +115,7 @@ const Services = ({ text }: { text: string[] }) => {
   return (
     <>
       <div className="relative 2xl:px-20">
-        <section className="max-w-[1050px] 2xl:max-w-[1350px] mx-auto relative ">
+        <section className="max-w-[1200px] 2xl:max-w-[1350px] mx-auto relative ">
           <Numbers
             containerClass="text-4xl -top-20 left-6"
             spanClass="blur"
@@ -167,12 +167,8 @@ const Services = ({ text }: { text: string[] }) => {
                 height={img.height}
                 className={img.class}
                 key={img.alt}
-                loading="eager"
+                loading="lazy"
                 quality={img.quality}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
               />
             ))}
           </div>

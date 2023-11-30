@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <div className="max-w-[1200px] 2xl:max-w-[1350px] mx-auto relative z-10">
       <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-between mt-10 lg:mt-2 px-5 xl:px-0">
-        <div className="absolute min-w-full bg-white/10 h-[2px] top-32 left-0 lg:hidden"></div>
-        <div className="absolute min-w-full bg-white/10 h-[2px] bottom-44 left-0 lg:hidden"></div>
+        <div className="absolute min-w-full bg-white/10 h-[2px] top-24 md:top-36 left-0 lg:hidden"></div>
+        <div className="absolute min-w-full bg-white/10 h-[2px] bottom-40 md:bottom-48 left-0 lg:hidden"></div>
         <div className="text-center hidden font-medium text-white pt-4 flex-col font-cf xl:flex">
           <span className="text-5xl 2xl:text-6xl tracking-[0.7rem] pr-2 font-bold">
             KLTP
@@ -15,12 +15,12 @@ const Footer = () => {
             exchange
           </span>
         </div>
-        <div className="order-2 lg:order-none relative flex-grow lg:flex-grow-0 lg:ml-3">
-          <h4 className="uppercase text-white text-lg font-black  text-center lg:text-left mt-16 mb-4 lg:mb-0 lg:mt-10 font-tt">
+        <div className="order-2 lg:order-none relative flex-grow lg:flex-grow-0 lg:ml-3 lg:mt-10">
+          <h4 className="uppercase text-white text-lg font-black text-center lg:text-left mt-8 mb-4 lg:my-0 font-tt">
             Локализация
           </h4>
-          <div className="flex flex-wrap lg:flex-nowrap gap-6 lg:gap-6 text-[#D9D9D9] text-sm font-bold md:mt-8 ">
-            <div className="flex-auto flex flex-col gap-1 text-center lg:text-left font-ct">
+          <div className="flex flex-wrap lg:flex-nowrap gap-6 text-[#D9D9D9] text-sm font-bold md:mt-14">
+            <div className="flex-auto flex flex-col gap-1 text-center lg:text-left font-ct md:pb-2">
               <span>Warszawa</span>
               <span className="font-medium">Żurawia 6/12, офис 418</span>
               <div className="hidden lg:block min-w-full bg-white/50 h-[1px] my-1"></div>
@@ -50,10 +50,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="order-3 lg:order-none">
-          <h4 className="uppercase text-white text-lg font-black text-center lg:text-left mt-16 lg:mt-6 font-tt pb-8 md:pb-0">
+          <h4 className="uppercase text-white text-lg font-black text-center lg:text-left mt-12 lg:mt-0 font-tt pb-4 md:pb-0">
             Контакт
           </h4>
-          <div className="flex lg:flex-col gap-20 lg:gap-5 md:mt-12">
+          <div className="flex lg:flex-col gap-20 lg:gap-5 md:mt-14">
             <p className="text-[#D9D9D9] text-base font-light font-ct">
               <Link href={"mailto:kltp.finance@gmail.com?subject=KLTP order"}>
                 kltp.finance@gmail.com
@@ -85,10 +85,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="lg:ml-5 order-1 lg:order-none">
-          <h4 className="uppercase text-white text-lg font-black pb-6 md:pb-0 lg:pb-8 lg:mt-4 text-center lg:text-left font-tt">
+          <h4 className="uppercase text-white text-lg font-black pb-4 md:pb-0 text-center lg:text-left font-tt">
             Документы
           </h4>
-          <div className="flex lg:flex-col text-white/70 text-sm gap-10 font-light lg:gap-2 font-ct text-center md:text-left md:mt-8">
+          <div className="flex lg:flex-col text-white/70 text-sm gap-10 font-light lg:gap-2 font-ct text-center md:text-left md:mt-14 md:pb-6">
             <Link href={"/"} className="w-full">
               AML / CTF terms
             </Link>
