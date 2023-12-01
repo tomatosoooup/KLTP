@@ -1,15 +1,18 @@
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 const MobileMenu = ({ isVisible, onClick }) => {
+  const t = useTranslations("Navbar");
+  const t2 = useTranslations("Footer");
+
   const handleScrollClick = (targetId: string) => {
     let c = document.getElementById(targetId).getBoundingClientRect();
     window.scrollTo({
       behavior: "smooth",
-      top: document.getElementById(targetId).scrollTop + c.top - 175,
+      top: document.getElementById(targetId).scrollTop + c.top - 20,
     });
-    console.log("worked");
   };
 
   return (
@@ -34,7 +37,7 @@ const MobileMenu = ({ isVisible, onClick }) => {
           }}
           className="ml-5 pt-2"
         >
-          Головна
+          {t("main")}
         </span>
         <div className="absolute h-[1px] left-0 top-14 w-full bg-white/10"></div>
         <span
@@ -44,7 +47,7 @@ const MobileMenu = ({ isVisible, onClick }) => {
           }}
           className="ml-5"
         >
-          О нас
+          {t("about")}
         </span>
         <div className="absolute h-[1px] left-0 top-32 w-full bg-white/10"></div>
         <span
@@ -54,7 +57,7 @@ const MobileMenu = ({ isVisible, onClick }) => {
           }}
           className="ml-5"
         >
-          Послуги
+          {t("services")}
         </span>
         <div className="absolute h-[1px] left-0 top-[200px] w-full bg-white/10"></div>
         <span
@@ -64,7 +67,7 @@ const MobileMenu = ({ isVisible, onClick }) => {
           }}
           className="ml-5"
         >
-          Контакти
+          {t("contacts")}
         </span>
         <div className="absolute h-[1px] left-0 -bottom-4 w-full bg-white/10"></div>
       </ul>
@@ -72,12 +75,12 @@ const MobileMenu = ({ isVisible, onClick }) => {
       <div className="flex flex-col px-5 mt-8 text-[#D9D9D9] font-bold z-20 font-ct gap-y-6">
         <div className="flex flex-col">
           <span>Wrocław</span>
-          <span className="font-normal">Ofiar Oswiecimskich 17</span>
+          <span className="font-normal">Ofiar Oświęcimskich 17</span>
         </div>
 
         <div className="flex flex-col">
           <span>Poznań</span>
-          <span className="font-normal">Poznańska 1/36 60-848</span>
+          <span className="font-normal">Poznańska 1</span>
         </div>
 
         <div className="flex flex-col">
@@ -87,12 +90,12 @@ const MobileMenu = ({ isVisible, onClick }) => {
 
         <div className="flex flex-col">
           <div className="flex gap-4">
-            <span className="font-bold">Пн-Пт</span>
+            <span className="font-bold">{t2("date_1")}</span>
             <span className="font-bold">10:00-20:00</span>
           </div>
           <div className="flex gap-4">
-            <span className="font-bold">Сб-Вс</span>
-            <span className="font-bold">По запросу</span>
+            <span className="font-bold">{t2("date_2")}</span>
+            <span className="font-bold">{t2("temp")}</span>
           </div>
         </div>
         <Link href={"/"} className="font-normal">
