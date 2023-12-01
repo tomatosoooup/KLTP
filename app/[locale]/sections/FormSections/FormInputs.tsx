@@ -17,7 +17,7 @@ interface FormInputsProps {
 }
 
 const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
-  const [amount, setAmount] = useState<number>(1);
+  const [amount, setAmount] = useState<string | number>(0);
   const [avgPrice, setAvgPrice] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<boolean>();
 
@@ -46,21 +46,52 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
 
   const [disabled, setIsDisabled] = useState(true);
 
-  const onSendMessage = () => {
-    if (typeof localStorage !== "undefined") {
-      const cur1 = localStorage.getItem("cur1");
-      const cur2 = localStorage.getItem("cur2");
-      const text = `Пользователь - ${reciever}.\n\n
-      Валюта 1 - ${cur1} \n Валюта 2 - ${cur2} \n\n  
-      Iban|Town - ${iban_town}. \n\n
-      Telegram - ${telegram} ${amount}`;
+  const onSendMessage = async () => {
+    let lastMessageTime: string | number =
+      localStorage.getItem("lastMessageTime") || "0" || undefined;
+    lastMessageTime = parseInt(lastMessageTime);
+    try {
+      const currentTime = Date.now();
 
-      const req = axios.post(
-        `${telegramUrl}${token}/sendMessage?chat_id=${chat_id}&text=${text}`
-      );
-      if (req) {
-        return null;
+      if (currentTime - (lastMessageTime as number) < 5 * 60 * 1000) {
+        alert("You can send only 1 request per 5 minutes");
+        return;
       }
+
+      if (typeof localStorage !== "undefined") {
+        const cur1 = localStorage.getItem("cur1");
+        const cur2 = localStorage.getItem("cur2");
+        const text = `
+        Пользователь - ${reciever}.
+        Telegram - ${telegram}.
+        Iban|Town - ${iban_town}.
+        Отдаёт - ${cur1}.
+        Получает - ${cur2}.
+        Количество - ${amount}.`;
+
+        const url = `${telegramUrl}${token}/sendMessage`;
+
+        const params = new URLSearchParams({
+          chat_id: chat_id,
+          text: text,
+        });
+
+        const req = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: params,
+        });
+
+        if (req.ok) {
+          lastMessageTime = currentTime;
+          localStorage.setItem("lastMessageTime", lastMessageTime.toString());
+          return;
+        }
+      }
+    } catch (err) {
+      return null;
     }
   };
 
@@ -100,15 +131,6 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
       const currency =
         localStorage.getItem("cur1") + localStorage.getItem("cur2");
       fetchData(currency);
-    }
-
-    checkAllow();
-  };
-
-  const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newAmount = parseFloat(e.target.value);
-    if (!isNaN(newAmount)) {
-      setAmount(newAmount);
     }
 
     checkAllow();
@@ -154,7 +176,15 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
             <Reveal options={{ x: -100 }} width="100%">
               <>
                 <div className="mb-1">{text[2]}</div>
-                <Input id="input-1" onChange={handleAmountChange} />
+                <Input
+                  id="input-1"
+                  onChange={(e) => {
+                    setAmount(e.target.value.replace(/[^\d]/g, ""));
+                    checkAllow();
+                  }}
+                  value={amount}
+                  max_length={20}
+                />
                 <span className="absolute left-3 -bottom-5 md:-bottom-6 text-xs md:text-sm text-[#555555] font-semibold block overflow-x-hidden">
                   {avgPrice
                     ? `1 ${localStorage.getItem(
@@ -182,7 +212,7 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
       <div className="flex flex-col gap-y-8 lg:gap-y-10 justify-center text-white px-5 mt-10 lg:mr-14 order-2 lg:order-none font-tt">
         <Reveal options={{ x: 100 }} width="100%">
           <>
-            <div className="font-medium mb-1 lg:mb-0">
+            <div className="font-medium mb-1 lg:mb-0 pb-3">
               {type === "Cash" ? `${text[4]}` : "IBAN"}
             </div>
             <Input
@@ -194,6 +224,11 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
               max_length={40}
               required
             />
+            {!iban_town && (
+              <p className="absolute text-xs mt-1 ml-1 text-white/70">
+                Please enter value
+              </p>
+            )}
           </>
         </Reveal>
         <Reveal options={{ x: 100 }} width="100%">
@@ -208,6 +243,11 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
               max_length={40}
               required
             />
+            {!reciever && (
+              <p className="absolute text-xs mt-1 ml-1 text-white/70">
+                Please enter value
+              </p>
+            )}
           </>
         </Reveal>
         <Reveal options={{ x: 100 }} width="100%">
@@ -223,6 +263,11 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
               max_length={40}
               required
             />
+            {!telegram.startsWith("@") && (
+              <p className="absolute text-xs mt-1 ml-1 text-white/70">
+                Please enter value starting with @
+              </p>
+            )}
           </>
         </Reveal>
       </div>

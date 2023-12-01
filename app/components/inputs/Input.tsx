@@ -6,7 +6,7 @@ interface InputProps {
   type?: string;
   required?: boolean;
   disabled?: boolean;
-  value?: string;
+  value?: string | number;
   onChange?: (str: any) => void;
   placeholder?: string;
   max_length?: number;
