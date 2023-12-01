@@ -1,5 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const Navbar = () => {
   const t = useTranslations("Navbar");
@@ -14,7 +15,7 @@ const Navbar = () => {
 
   return (
     <div className="hidden lg:block ">
-      <div className="max-w-[1150px] 2xl:max-w-[1400px] mx-auto my-5 ">
+      <div className="max-w-[1150px] 2xl:max-w-[1400px] mx-auto my-5 px-5 xl:px-0">
         <ul className="flex list-none items-center justify-center h-full text-[20px] uppercase text-white w-full font-light font-tt">
           <span
             className="mt-7 cursor-pointer mr-auto"
@@ -37,10 +38,13 @@ const Navbar = () => {
           relative"
           >
             <div className="w-16 h-[1px] bg-gradient-to-l from-white to-white/10 absolute -left-28 top-14"></div>
-            <span className="text-6xl tracking-[0.5rem] font-cf">KLTP</span>
-            <span className="text-xl tracking-[0.8rem] lowercase font-light font-ct">
-              exchange
-            </span>
+            <Image
+              src={"/images/logo.png"}
+              width={200}
+              height={100}
+              alt="logo"
+              className="hidden lg:block"
+            />
             <div className="w-16 h-[1px] bg-gradient-to-r from-white to-white/10 absolute -right-28 top-14"></div>
           </div>
           <span
