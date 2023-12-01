@@ -120,8 +120,6 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
         localStorage.getItem("cur1") + localStorage.getItem("cur2");
       fetchData(currency);
     }
-
-    checkAllow();
   };
 
   const handleToChoose = (cur: string, type: string) => {
@@ -133,8 +131,6 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
         localStorage.getItem("cur1") + localStorage.getItem("cur2");
       fetchData(currency);
     }
-
-    checkAllow();
   };
 
   const options = getOptions({ option: "first" });

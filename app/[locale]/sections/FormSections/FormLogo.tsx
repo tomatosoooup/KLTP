@@ -14,7 +14,7 @@ const FormLogo = () => {
                 width={200}
                 height={100}
                 alt="logo"
-                className="hidden xl:block mt-2"
+                className="hidden lg:block mt-2"
               />
               <div className="w-12 md:w-24 lg:w-56 h-[1px] bg-gradient-to-r from-white to-white/10 absolute -right-16 md:-right-32 lg:-right-64 top-11 lg:top-16"></div>
             </div>
