@@ -43,5 +43,12 @@
     "l7-": "(opłaty za mieszkania, szkolenia, transfery do rodziny)",
     "l8": "Płatność za aukcje towarów i samochodów na całym świecie."
   },
-  "Footer": {}
+  "Footer": {
+    "local": "LOKALIZACJA",
+    "contact": "ŁĄCZNOŚĆ",
+    "docs": "DOKUMENTY",
+    "temp": "Na prośbę",
+    "date_1": "Mon-Fri",
+    "date_2": "Sat-Sun"
+  }
 }

@@ -82,18 +82,19 @@ const Form = ({ text }: { text: string[] }) => {
                   >
                     {isClickedTwo && <BsCheck2 size={19} color="white" />}
                   </div>
-
                   <Link href={"/"}>I agree with AML / CTF Terms</Link>
                 </div>
-                <Image
-                  alt="qr-code"
-                  src={"/images/qr.png"}
-                  width={95}
-                  height={95}
-                  className="absolute hidden lg:block right-20 top-0 pointer-events-none"
-                  loading="lazy"
-                />
               </>
+            </Reveal>
+            <Reveal options={{ x: 100 }} width="fit-content">
+              <Image
+                alt="qr-code"
+                src={"/images/qr.png"}
+                width={95}
+                height={95}
+                className="absolute hidden lg:block right-20 top-0 pointer-events-none"
+                loading="lazy"
+              />
             </Reveal>
           </div>
           <FormLogo />

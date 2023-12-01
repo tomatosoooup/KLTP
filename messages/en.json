@@ -43,5 +43,12 @@
     "l7-": "(payments for apartments, training, transfers to family)",
     "l8": "Payment for goods and car auctions around the world."
   },
-  "Footer": {}
+  "Footer": {
+    "local": "LOCALIZATION",
+    "contact": "CONTACTS",
+    "docs": "DOCUMENTS",
+    "temp": "By request",
+    "date_1": "Mon-Fri",
+    "date_2": "Sat-Sun"
+  }
 }

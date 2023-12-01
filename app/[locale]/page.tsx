@@ -53,6 +53,16 @@ export default function Home() {
     services("l8"),
   ];
 
+  const footer = useTranslations("Footer");
+  const footerText = [
+    footer("local"),
+    footer("contact"),
+    footer("docs"),
+    footer("temp"),
+    footer("date_1"),
+    footer("date_2"),
+  ];
+
   return (
     <>
       <LazyMain text={mainText} />
@@ -63,7 +73,7 @@ export default function Home() {
       <Ticker />
       <LazyServices text={servicesText} />
       <Ticker />
-      <LazyFooter />
+      <LazyFooter text={footerText} />
     </>
   );
 }
