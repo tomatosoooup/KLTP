@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <div className="hidden lg:block ">
-      <div className="max-w-[1150px] 2xl:max-w-[1400px] mx-auto my-5 px-5 xl:px-0">
+      <div className="max-w-[1150px] 2xl:max-w-[1400px] mx-auto my-5 px-5">
         <ul className="flex list-none items-center justify-center h-full text-[20px] uppercase text-white w-full font-light font-tt">
           <span
             className="mt-7 cursor-pointer mr-auto"
