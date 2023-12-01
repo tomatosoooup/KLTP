@@ -93,6 +93,10 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
           lastMessageTime = currentTime;
           localStorage.setItem("lastMessageTime", lastMessageTime.toString());
           alert("Your request was sent!");
+
+          setIbanTown("");
+          setReciever("");
+          setTelegram("");
           return;
         }
       }
