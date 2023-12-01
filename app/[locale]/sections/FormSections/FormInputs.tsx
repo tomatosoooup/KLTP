@@ -87,6 +87,7 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
         if (req.ok) {
           lastMessageTime = currentTime;
           localStorage.setItem("lastMessageTime", lastMessageTime.toString());
+          alert("Your request was sent!");
           return;
         }
       }
