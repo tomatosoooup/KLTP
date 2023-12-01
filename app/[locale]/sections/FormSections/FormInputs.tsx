@@ -9,7 +9,7 @@ import { TfiReload } from "react-icons/tfi";
 
 import { getOptions } from "app/utils/getOptions";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Select from "app/components/inputs/Select";
 
 interface FormInputsProps {
@@ -25,26 +25,31 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
   const [reciever, setReciever] = useState("");
   const [telegram, setTelegram] = useState("");
 
+  const [isDisabled, setIsDisabled] = useState(true);
+
   const [type, setType] = useState("");
 
   const telegramUrl = "https://api.telegram.org/bot";
   const token = "6710200037:AAFmMRbXMTD7epqpg-Uqmi60PtVPwHnfDD0";
   const chat_id = "-4030341613";
 
-  const checkAllow = () => {
+  useEffect(() => {
+    const isIbanTownEmpty = iban_town.length !== 0;
+    const isReceiverEmpty = reciever.length !== 0;
+    const isTelegramEmpty = telegram.length !== 0;
+    const isTelegramInvalid = telegram.startsWith("@");
+
     if (
-      iban_town.length !== 0 &&
-      reciever.length !== 0 &&
-      telegram.length !== 0 &&
-      telegram.startsWith("@")
+      isIbanTownEmpty &&
+      isReceiverEmpty &&
+      isTelegramEmpty &&
+      isTelegramInvalid
     ) {
       setIsDisabled(false);
     } else {
       setIsDisabled(true);
     }
-  };
-
-  const [disabled, setIsDisabled] = useState(true);
+  }, [iban_town, reciever, telegram]);
 
   const onSendMessage = async () => {
     let lastMessageTime: string | number =
@@ -109,8 +114,6 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
       setAvgPrice(null);
       setErrorMessage(true);
     }
-
-    checkAllow();
   };
 
   const handleFromChoose = (cur: string) => {
@@ -177,7 +180,6 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
                   id="input-1"
                   onChange={(e) => {
                     setAmount(e.target.value.replace(/[^\d]/g, ""));
-                    checkAllow();
                   }}
                   value={amount}
                   max_length={20}
@@ -194,7 +196,7 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
           </div>
           <div className="w-full lg:w-1/2 absolute bottom-10 left-0 px-5 lg:px-0 lg:bottom-0 lg:left-0 lg:relative lg:flex h-[45px] mt-1">
             <Reveal options={{ x: -100 }} width="100%">
-              <Button fullWidth type="button" disabled={disabled}>
+              <Button fullWidth type="button" disabled={isDisabled}>
                 <span
                   className="text-white pt-1 text-xs 2xl:text-[11px] font-medium"
                   onClick={onSendMessage}
@@ -216,7 +218,6 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
               id="input-3"
               onChange={(e) => {
                 setIbanTown(e.target.value);
-                checkAllow();
               }}
               max_length={40}
               required
@@ -235,7 +236,6 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
               id="input-4"
               onChange={(e) => {
                 setReciever(e.target.value);
-                checkAllow();
               }}
               max_length={40}
               required
@@ -254,7 +254,6 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
               id="input-5"
               onChange={(e) => {
                 setTelegram(e.target.value);
-                checkAllow();
               }}
               placeholder="@username"
               max_length={40}
