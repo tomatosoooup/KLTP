@@ -61,6 +61,7 @@ export default function Home() {
     footer("temp"),
     footer("date_1"),
     footer("date_2"),
+    footer("office"),
   ];
 
   return (

@@ -35,11 +35,11 @@ const Main = ({ text }: { text: string[] }) => {
                 </div>
               </Reveal>
               <Reveal options={{ x: -200 }}>
-                <p className="text-sm md:text-xl text-[#CECECE] font-light lg:max-w-xl font-tt">
-                  <span className="font-bold tracking-tighter">{text[0]}</span>
+                <p className="text-sm md:text-xl text-[#CECECE] font-light lg:max-w-xl font-tt ">
+                  <span className="font-bold tracking-[0.1px]">{text[0]}</span>
                   <br />
                   <span className="my-3 block" />
-                  <span className="font-normal tracking-tighter ">
+                  <span className="font-normal tracking-[0.1px]">
                     {text[1]}
                   </span>
                 </p>

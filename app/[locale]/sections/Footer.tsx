@@ -22,7 +22,7 @@ const Footer = ({ text }: { text: string[] }) => {
           <div className="flex flex-wrap lg:flex-nowrap gap-6 text-[#D9D9D9] text-sm font-bold md:mt-8">
             <div className="flex-auto flex flex-col gap-1 text-center lg:text-left font-ct md:pb-2">
               <span>Warszawa</span>
-              <span className="font-medium">Żurawia 6/12, офис 418</span>
+              <span className="font-medium">Żurawia 6/12, {text[6]} 418</span>
               <div className="hidden lg:block min-w-full bg-white/50 h-[1px] my-1"></div>
               <div className="flex flex-col">
                 <span className="font-bold w-full">{text[4]} 10:00-20:00</span>
