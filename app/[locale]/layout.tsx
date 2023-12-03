@@ -8,8 +8,13 @@ import LangSelect from "app/components/LangSelect";
 
 export const metadata: Metadata = {
   title: "KLTP",
-  description: "KLTP ",
+  description: `Our company constantly monitors market trends in order to implement the most advanced and secure solutions in the field of finance.
+                Safety - is not just a word, but out basic principle of work.
+                We combine the best traditions of banking services with innovative solutions in the field of finance and cryptocurrencies.
+                We provide services for buying/selling cryptocurrency for cash in more than 52 countries around the world.
+                KLTP EXCHANGE - is a certified cryptocurrency exchange service with a European license.`,
 };
+
 interface RootLayoutProps {
   children: React.ReactNode;
   params: {

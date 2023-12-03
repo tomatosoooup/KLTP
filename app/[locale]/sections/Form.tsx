@@ -49,7 +49,11 @@ const Form = ({ text }: { text: string[] }) => {
             spanClass="blur"
             nums={[0, 0, 1, 0]}
           />
-          <FormInputs text={text} />
+          <FormInputs
+            text={text}
+            isClicked={isClicked}
+            isClickedTwo={isClickedTwo}
+          />
 
           <section className="lg:hidden order-4 lg:order-none ">
             <Reveal options={{ x: 100 }} width="100%">
@@ -70,7 +74,7 @@ const Form = ({ text }: { text: string[] }) => {
                   </div>
 
                   <Link href={"/"}>
-                    I agree with Terms and conditions of service
+                    I agree with <u>Terms and conditions of service</u>
                   </Link>
                 </div>
                 <div className="flex items-center gap-x-2 mt-2 lg:ml-[52%]">
@@ -82,11 +86,13 @@ const Form = ({ text }: { text: string[] }) => {
                   >
                     {isClickedTwo && <BsCheck2 size={19} color="white" />}
                   </div>
-                  <Link href={"/"}>I agree with AML / CTF Terms</Link>
+                  <Link href={"/"}>
+                    I agree with <u>AML / CTF Terms</u>
+                  </Link>
                 </div>
               </>
             </Reveal>
-            <Reveal options={{ x: 100 }} width="fit-content">
+            <Reveal options={{}} width="fit-content">
               <Image
                 alt="qr-code"
                 src={"/images/qr.png"}

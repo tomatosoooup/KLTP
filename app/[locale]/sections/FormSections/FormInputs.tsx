@@ -14,18 +14,26 @@ import Select from "app/components/inputs/Select";
 
 interface FormInputsProps {
   text: string[];
+  isClicked?: boolean;
+  isClickedTwo?: boolean;
 }
 
-const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
-  const [amount, setAmount] = useState<string | number>(0);
+const FormInputs: React.FC<FormInputsProps> = ({
+  text,
+  isClicked,
+  isClickedTwo,
+}) => {
+  const [amount, setAmount] = useState<string | number>(100);
   const [avgPrice, setAvgPrice] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<boolean>();
 
-  const [iban_town, setIbanTown] = useState("");
-  const [reciever, setReciever] = useState("");
-  const [telegram, setTelegram] = useState("");
+  const [iban_town, setIbanTown] = useState<string>("");
+  const [reciever, setReciever] = useState<string>("");
+  const [telegram, setTelegram] = useState<string>("");
 
   const [isDisabled, setIsDisabled] = useState(true);
+
+  const [swap, setSwap] = useState<boolean>(false);
 
   const [type, setType] = useState("");
 
@@ -43,13 +51,15 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
       isIbanTownEmpty &&
       isReceiverEmpty &&
       isTelegramEmpty &&
-      isTelegramInvalid
+      isTelegramInvalid &&
+      isClicked &&
+      isClickedTwo
     ) {
       setIsDisabled(false);
     } else {
       setIsDisabled(true);
     }
-  }, [iban_town, reciever, telegram]);
+  }, [iban_town, reciever, telegram, isClicked, isClickedTwo]);
 
   const onSendMessage = async () => {
     let lastMessageTime: string | number =
@@ -71,8 +81,9 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
         Telegram - ${telegram}.
         Iban|Town - ${iban_town}.
         Отдаёт - ${cur1}.
+        Количество - ${amount}.
         Получает - ${cur2}.
-        Количество - ${amount}.`;
+        `;
 
         const url = `${telegramUrl}${token}/sendMessage`;
 
@@ -152,23 +163,31 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
               <>
                 <div className="mb-1">{text[0]}</div>
                 <Select
-                  options={options}
-                  initialValues={["TRC20", "USDT"]}
+                  options={swap ? options2 : options}
+                  initialValues={swap ? ["Cash", "EUR"] : ["TRC20", "USDT"]}
                   onChoose={handleFromChoose}
                 ></Select>
               </>
             </Reveal>
           </div>
           <Reveal options={{ x: -100 }}>
-            <TfiReload size={18} color="#828282" className="mt-7" />
+            <TfiReload
+              size={18}
+              color="#828282"
+              className="mt-7 cursor-pointer"
+              onClick={() => {
+                setSwap(!swap);
+                alert("You have changed currencies");
+              }}
+            />
           </Reveal>
           <div className="w-1/2">
             <Reveal options={{ x: -100 }} width="100%">
               <>
                 <div className="mb-1">{text[1]}</div>
                 <Select
-                  options={options2}
-                  initialValues={["Cash", "EUR"]}
+                  options={swap ? options : options2}
+                  initialValues={swap ? ["TRC20", "USDT"] : ["Cash", "EUR"]}
                   onChoose={handleToChoose}
                 ></Select>
               </>
@@ -215,16 +234,17 @@ const FormInputs: React.FC<FormInputsProps> = ({ text }) => {
       <div className="flex flex-col gap-y-8 lg:gap-y-10 justify-center text-white px-5 mt-10 lg:mr-14 order-2 lg:order-none font-tt">
         <Reveal options={{ x: 100 }} width="100%">
           <>
-            <div className="font-medium mb-1 lg:mb-0 pb-3">
+            <div className="font-medium mb-1 lg:mb-0">
               {type === "Cash" ? `${text[4]}` : "IBAN"}
             </div>
             <Input
               id="input-3"
               onChange={(e) => {
-                setIbanTown(e.target.value);
+                setIbanTown(e.target.value.replace(/[^a-zA-Z0-9а-яА-Я]/g, ""));
               }}
               max_length={40}
               required
+              value={iban_town}
             />
             {!iban_town && (
               <p className="absolute text-xs mt-1 ml-1 text-white/70">
