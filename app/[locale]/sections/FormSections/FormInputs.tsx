@@ -174,10 +174,9 @@ const FormInputs: React.FC<FormInputsProps> = ({
             <TfiReload
               size={18}
               color="#828282"
-              className="mt-7 cursor-pointer"
+              className={`mt-7 cursor-pointer ${swap ? 'rotate-clockwise' : 'rotate-counterclockwise'}`}
               onClick={() => {
                 setSwap(!swap);
-                alert("You have changed currencies");
               }}
             />
           </Reveal>

@@ -145,3 +145,14 @@ body {
   -webkit-mask-size: cover;
   mask-size: cover;
 }
+
+.rotate-clockwise {
+  transition: transform 0.7s ease-in-out;
+  transform: rotate(360deg);
+}
+
+.rotate-counterclockwise {
+  transition: transform 0.7s ease-in-out;
+  transform: rotate(-360deg);
+}
+
