@@ -230,7 +230,7 @@ const FormInputs: React.FC<FormInputsProps> = ({
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-y-8 lg:gap-y-10 justify-center text-white px-5 mt-10 lg:mr-14 order-2 lg:order-none font-tt">
+      <div className="flex flex-col gap-y-12 lg:gap-y-10 justify-center text-white px-5 mt-10 lg:mr-14 order-2 lg:order-none font-tt">
         <Reveal options={{ x: 100 }} width="100%">
           <>
             <div className="font-medium mb-1 lg:mb-0">
