@@ -76,13 +76,15 @@ const FormInputs: React.FC<FormInputsProps> = ({
       if (typeof localStorage !== "undefined") {
         const cur1 = localStorage.getItem("cur1");
         const cur2 = localStorage.getItem("cur2");
+        const type1 = localStorage.getItem("type1");
+        const type2 = localStorage.getItem("type2");
         const text = `
         Пользователь - ${reciever}.
         Telegram - ${telegram}.
         Iban|Town - ${iban_town}.
-        Отдаёт - ${cur1}.
+        Отдаёт - ${cur1} - ${type1}.
         Количество - ${amount}.
-        Получает - ${cur2}.
+        Получает - ${cur2} - ${type2}.
         `;
 
         const url = `${telegramUrl}${token}/sendMessage`;
@@ -103,7 +105,6 @@ const FormInputs: React.FC<FormInputsProps> = ({
         if (req.ok) {
           lastMessageTime = currentTime;
           localStorage.setItem("lastMessageTime", lastMessageTime.toString());
-          alert("Your request was sent!");
 
           setIbanTown("");
           setReciever("");
@@ -131,9 +132,10 @@ const FormInputs: React.FC<FormInputsProps> = ({
     }
   };
 
-  const handleFromChoose = (cur: string) => {
+  const handleFromChoose = (cur: string, type: string) => {
     if (typeof localStorage !== "undefined") {
       localStorage.setItem("cur1", cur);
+      localStorage.setItem("type1", type);
       const currency =
         localStorage.getItem("cur1") + localStorage.getItem("cur2");
       fetchData(currency);
@@ -143,6 +145,7 @@ const FormInputs: React.FC<FormInputsProps> = ({
   const handleToChoose = (cur: string, type: string) => {
     if (typeof localStorage !== "undefined") {
       localStorage.setItem("cur2", cur);
+      localStorage.setItem("type2", type);
       setType(type);
 
       const currency =
