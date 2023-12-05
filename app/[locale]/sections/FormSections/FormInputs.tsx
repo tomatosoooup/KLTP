@@ -174,7 +174,9 @@ const FormInputs: React.FC<FormInputsProps> = ({
             <TfiReload
               size={18}
               color="#828282"
-              className={`mt-7 cursor-pointer ${swap ? 'rotate-clockwise' : 'rotate-counterclockwise'}`}
+              className={`mt-7 cursor-pointer ${
+                swap ? "rotate-clockwise" : "rotate-counterclockwise"
+              }`}
               onClick={() => {
                 setSwap(!swap);
               }}
@@ -193,7 +195,7 @@ const FormInputs: React.FC<FormInputsProps> = ({
             </Reveal>
           </div>
         </div>
-        <div className="flex px-5 lg:px-10 w-full text-white items-end justify-between gap-x-14 mt-6 font-medium">
+        <div className="flex px-5 lg:px-10 w-full text-white items-end justify-between gap-x-14 mt-8 font-medium">
           <div className="w-full lg:w-1/2 relative">
             <Reveal options={{ x: -100 }} width="100%">
               <>
@@ -230,7 +232,7 @@ const FormInputs: React.FC<FormInputsProps> = ({
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-y-12 lg:gap-y-10 justify-center text-white px-5 mt-10 lg:mr-14 order-2 lg:order-none font-tt">
+      <div className="flex flex-col gap-y-12 lg:gap-y-10 justify-center text-white px-5 mt-8 lg:mr-14 order-2 lg:order-none font-tt">
         <Reveal options={{ x: 100 }} width="100%">
           <>
             <div className="font-medium mb-1 lg:mb-0">
