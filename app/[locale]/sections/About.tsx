@@ -98,7 +98,7 @@ const About = ({ text }: { text: string[] }) => {
             {text[1]}
           </p>
           <div className="lg:grid lg:grid-cols-2 text-white mb-10 lg:mb-12">
-            <div className="lg:hidden relative h-[225px] max-w-[400px] mx-auto">
+            <div className="lg:hidden relative h-[215px] max-w-[400px] mx-auto mt-5">
               {imagesMobile.map((img) => (
                 <Image
                   alt={img.alt}
