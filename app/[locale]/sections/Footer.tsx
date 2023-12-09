@@ -73,10 +73,10 @@ const Footer = ({ text }: { text: string[] }) => {
             {text[1]}
           </h3>
           <div className="flex justify-between sm:justify-center lg:justify-center xl:block">
-            <div className="w-[50%] sm:w-[25%] xl:w-full">
+            <div className="w-[50%] sm:w-[25%] xl:w-full text-base font-ct">
               <Link
                 href={"mailto:kltp.finance@gmail.com?subject=KLTP order"}
-                className="text-[#D9D9D9] text-base font-light font-ct"
+                className="text-[#D9D9D9]  font-light "
               >
                 kltp.finance@gmail.com
               </Link>
