@@ -39,7 +39,7 @@ const Main = ({ text }: { text: string[] }) => {
                   <span className="font-bold tracking-[0.1px]">{text[0]}</span>
                   <br />
                   <span className="my-3 block" />
-                  <span className="font-normal tracking-[0.1px]">
+                  <span className="font-normal tracking-[0.1px] [word-spacing:-2px]">
                     {text[1]}
                   </span>
                 </p>

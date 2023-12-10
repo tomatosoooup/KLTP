@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import Image from "next/image";
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const BurgerMenu = () => {
     <>
       <button
         onClick={handleClick}
-        className="flex flex-col justify-center items-center h-14 z-20 relative"
+        className={`flex flex-col justify-center items-center h-14 z-10`}
       >
         <span
           className={`bg-slate-100 block transition-all duration-700 ease-out 
@@ -38,6 +39,14 @@ const BurgerMenu = () => {
                      }`}
         ></span>
       </button>
+
+      <Image
+        src={"/images/logo.png"}
+        width={100}
+        height={50}
+        alt="logo"
+        className="lg:hidden ml-5"
+      />
       <MobileMenu isVisible={isOpen} onClick={handleClick} />
     </>
   );

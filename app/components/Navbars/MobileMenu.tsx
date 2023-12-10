@@ -19,7 +19,7 @@ const MobileMenu = ({ isVisible, onClick }) => {
     <div
       className={clsx(
         `
-        h-screen w-72 md:w-80 bg-[#121212]/95 fixed inset-0 -translate-x-full py-20 rounded-tr-3xl
+        h-screen w-72 md:w-80 bg-[#121212]/95 fixed inset-0 -translate-x-full py-16 rounded-tr-3xl
         transition-all 
         duration-700
         overflow-y-auto
@@ -35,7 +35,7 @@ const MobileMenu = ({ isVisible, onClick }) => {
             onClick();
             handleScrollClick("main");
           }}
-          className="ml-5 pt-2"
+          className="ml-8 pt-2"
         >
           {t("main")}
         </span>
@@ -45,7 +45,7 @@ const MobileMenu = ({ isVisible, onClick }) => {
             onClick();
             handleScrollClick("about");
           }}
-          className="ml-5"
+          className="ml-8"
         >
           {t("about")}
         </span>
@@ -55,7 +55,7 @@ const MobileMenu = ({ isVisible, onClick }) => {
             onClick();
             handleScrollClick("services");
           }}
-          className="ml-5"
+          className="ml-8"
         >
           {t("services")}
         </span>
@@ -65,54 +65,52 @@ const MobileMenu = ({ isVisible, onClick }) => {
             onClick();
             handleScrollClick("footer");
           }}
-          className="ml-5"
+          className="ml-8"
         >
           {t("contacts")}
         </span>
         <div className="absolute h-[1px] left-0 -bottom-4 w-full bg-white/10"></div>
       </ul>
-
-      <div className="flex flex-col px-5 mt-8 text-[#D9D9D9] font-bold z-20 font-ct gap-y-6">
-        <div className="flex flex-col">
+      <div className="flex flex-col  mt-8 text-[#D9D9D9] font-bold z-20 font-ct gap-y-6">
+        <div className="flex flex-col px-5">
           <span>Wrocław</span>
           <span className="font-normal">Ofiar Oświęcimskich 17</span>
         </div>
-
-        <div className="flex flex-col">
+        <div className="flex flex-col px-5">
           <span>Poznań</span>
           <span className="font-normal">Poznańska 1</span>
         </div>
-
-        <div className="flex flex-col">
+        <div className="flex flex-col px-5">
           <span>Warszawa</span>
-          <span className="font-normal">Żurawia 6/12, офис 418</span>
+          <span className="font-normal">Żurawia 6/12, {t2("office")} 418</span>
         </div>
-
+        <div className="flex flex-col px-5">
+          <span>Kraków</span>
+          <span className="font-normal">Starowiślna 64</span>
+        </div>
         <div className="flex flex-col">
-          <div className="flex gap-4">
+          <hr className="mb-4" />
+          <div className="flex gap-4 px-5">
             <span className="font-bold">{t2("date_1")}</span>
             <span className="font-bold">10:00-20:00</span>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 px-5">
             <span className="font-bold">{t2("date_2")}</span>
             <span className="font-bold">{t2("temp")}</span>
           </div>
+          <hr className="mt-4" />
         </div>
-        <Link href={"/"} className="font-normal">
+        <Link href={"/"} className="font-normal px-5">
           kltp.finance@gmail.com
         </Link>
 
-        <div className="flex gap-5 font-ct">
+        <div className="flex gap-5 font-ct px-5">
           <Link href={"https://t.me/KLTP_EX"}>
             <Image
               alt="telegram"
               src={"./images/telegram.svg"}
               width={30}
               height={30}
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
             />
           </Link>
           <Link
@@ -123,10 +121,6 @@ const MobileMenu = ({ isVisible, onClick }) => {
               src={"./images/instagram.svg"}
               width={30}
               height={30}
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
             />
           </Link>
         </div>

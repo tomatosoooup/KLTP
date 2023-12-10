@@ -25,7 +25,7 @@ const LangSelect = ({ locale }: { locale?: string }) => {
     font-ct 
     w-[100px]
     ml-auto 
-    md:flex
+    lg:flex
     justify-end
     font-extralight 
     cursor-pointer 
