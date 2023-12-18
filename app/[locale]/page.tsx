@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
 import Ticker from "app/components/Ticker";
 
 const LazyMain = lazy(() => import("./sections/Main"));
@@ -11,6 +11,15 @@ const LazyServices = lazy(() => import("./sections/Services"));
 const LazyFooter = lazy(() => import("./sections/Footer"));
 
 export default function Home() {
+  useEffect(() => {
+    (async () => {
+      const LocomitiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomitiveScroll();
+      if (locomotiveScroll) {
+      }
+    })();
+  }, []);
+
   const main = useTranslations("Main");
   const mainText = [main("p1"), main("p2"), main("button")];
 

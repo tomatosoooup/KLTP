@@ -27,6 +27,12 @@
       "@/*": ["./app/[locale]/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/[locale]/layout.tsx"
+  ],
   "exclude": ["node_modules"]
 }
