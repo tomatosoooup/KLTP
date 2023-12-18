@@ -8,6 +8,11 @@ const BurgerMenu = () => {
 
   const handleClick = () => {
     setIsOpen(!isOpen);
+
+    const body = document.querySelector("body");
+    if (body) {
+      body.style.overflow = isOpen ? "" : "hidden";
+    }
   };
 
   return (

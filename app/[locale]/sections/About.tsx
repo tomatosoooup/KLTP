@@ -34,7 +34,7 @@ const imagesMobile = [
     src: "/images/ETH.png",
     width: 150,
     height: 150,
-    class: `absolute z-10 top-8 left-[2rem] pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
+    class: `absolute z-10 top-8 left-[2.5rem] pointer-events-none filter ${classes.imgLeft} ${classes.img}`,
   },
   {
     alt: "tez",
@@ -48,7 +48,7 @@ const imagesMobile = [
     src: "/images/BTC.png",
     width: 150,
     height: 150,
-    class: `absolute z-10 top-8 left-[14rem] pointer-events-none filter  ${classes.imgRight} ${classes.img}`,
+    class: `absolute z-10 top-8 left-[12.5rem] pointer-events-none filter  ${classes.imgRight} ${classes.img}`,
   },
 ];
 
